@@ -1,0 +1,874 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;500&display=swap');
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+:root {
+    --primary-color: #6AABD2;  /* Soft Blue */
+    --secondary-color: #F5E8C7; /* Warm Beige */
+    --accent-color: #C4DFAA;    /* Soft Green */
+    --background-color: #F8F9FA; /* Light Grey */
+    --text-color: #333333;      /* Dark Grey */
+}
+
+/* General Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Default font for paragraphs */
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--primary-color); /* Soft Blue */
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--secondary-color); /* Warm Beige */
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--accent-color); /* Soft Green */
+}
+
+/* Paragraphs */
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color); /* Dark Grey */
+}
+
+.navbar {
+    background-color: #e7b0f8; /* White background */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth background and shadow transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a professional look */
+}
+
+/* Logo Image */
+.logo-img {
+    margin-left: 10vh;
+    width: 18%;
+    height: 100px;
+    margin-right: 10vh;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+.navbar-border{
+        margin-left: 15px;
+        background-color: #800080; /* Same as navbar-nav for consistency */
+        padding: 5px; /* Adjust padding as needed */
+        border-radius: 50px;
+    
+}
+
+/* Hover effect on navbar links */
+.navbar-nav a {
+    
+    margin-right: 5vh;
+    font-size: x-large;
+    
+    color: #333333; /* Dark grey text color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+.nav-item a{
+    color:white;
+}
+
+.navbar-nav a:hover {
+    padding: 5px;
+    color:  #ffffff; /* Soft Blue for hover color */
+   transform: scale(1.2); /* Slight zoom-in effect for smooth hover interaction */
+}
+
+/* Smooth transition for navbar toggler icon */
+.navbar-toggler {
+    transition: transform 0.3s ease;
+}
+
+/* Add box shadow on hover for the navbar */
+.navbar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds depth on hover */
+}
+
+
+/* Transition for mobile navbar */
+.navbar-toggler-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Animation for navbar brand when page loads */
+.navbar-brand {
+    animation: slideIn 0.5s ease-out; /* Simple slide-in effect */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* Ensuring this layout stays within the container */
+/* Landing Page Wrapper */
+.LandingPage {
+    width: 100%;
+    height:120vh; /* Full viewport height */
+    position: relative;
+    padding: 5% 0;
+    background-image: url('bg2.jpg'); /* Ensure correct file path */
+    background-size: cover; /* Cover entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+}
+
+
+/* Background Image with Overlay */
+.LandingPage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* background: linear-gradient(to bottom, rgba(185, 129, 80, 0.7), rgba(230, 118, 19, 0.7));  */
+    /* Added transparency to keep image visible */
+    
+    z-index: -1; /* Keep it behind the content */
+}
+
+.LandingContent img{
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    margin-left: 80%;
+}
+/* Container to structure the layout */
+.LandingPage .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Left Side Text Content */
+.LandingContent {
+    width: 50%;
+    color: white;
+    position: relative;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .LandingPage .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .LandingContent {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .EnquiryForm {
+        width: 90%;
+    }
+}
+
+/* Right Side Form */
+.EnquiryForm {
+    background: #e7b0f8;
+    padding: 2rem;
+    border-radius: 200px;
+    width: 35%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Make it responsive */
+  max-width: 400px; /* Limit max width */
+  padding: 20px;
+  text-align: center; /* Center align text */
+  margin: auto; 
+}
+input::placeholder {
+    color: #e7b0f8; /* Change to your desired color */
+    opacity: 1; /* Ensures full color visibility */
+    font-weight: bold;
+  
+
+}input {
+    background-color: #800080;  /* Set the background color */
+    border: none;              /* Remove border */
+    color: #e7b0f8;              /* Text color */
+    padding: 10px;             /* Adjust padding */
+    width: 100%;               /* Make it full width */
+    font-weight: bold;         /* Make text bold */
+    outline: none;             /* Remove outline on focus */
+  }
+option {
+    color: #e7b0f8; /* Text color */
+    background-color: #f0eff0; /* Background color */
+}
+select {
+    background-color: #800080;  /* Set background color */
+    color: #e7b0f8;              /* Text color */
+    border: none;              /* Remove border */
+    padding: 10px;             /* Adjust padding */
+    width: 100%;               /* Make it full width */
+    font-weight: bold;         /* Make text bold */
+    outline: none;             /* Remove outline */
+    appearance: none;          /* Remove default dropdown arrow (for some browsers) */
+  }
+  
+  /* Optional: Style the dropdown arrow (only works on some browsers) */
+  select::-ms-expand {
+    display: none; /* Hide default dropdown arrow in IE/Edge */
+  }
+.EnquiryForm h2 {
+    text-align: center;
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.EnquiryForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.EnquiryForm label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.EnquiryForm input, .EnquiryForm select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.cta-button {
+    background: #800080;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background: #800080;
+}
+
+
+
+
+.heading1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #dc661c; 
+    font-family: Arial, sans-serif;
+}
+
+.heading {
+   
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #D81B60; /* Pinkish-red color */
+    font-family: Arial, sans-serif;
+}
+.welcome-container{
+    width: 100%;
+    height: auto;
+    /* background: url(welcome.jpg)no-repeat center center/cover; */
+    background-size: contain;
+    background-color: #e7b0f8;
+}
+/* .abou{
+    
+        background-image: url('Screenshot\ 2025-02-05\ 122453.png'); 
+        bac
+        background-size:auto;
+        background-position: center;
+        text-align: center;
+        padding: 20px;
+    
+} */
+.welcome {
+    padding:9%;
+    align-self: center;
+    align-content: center;
+    opacity: 0; /* Start with hidden state for fade-in effect */
+    transform: translateY(50px); /* Start with slight vertical offset */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth fade-in and slide effect */
+    width: 68%;
+    color: #ffffff;
+}
+
+/* Fade-in and slide-up effect on page load */
+.welcome.loaded {
+    opacity: 1;
+    transform: translateY(0); /* Reset the vertical offset */
+}
+
+/* Smooth transition for heading */
+.welcome h1 {
+    opacity: 0;
+    transform: translateY(20px); /* Start with slight vertical offset */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Smooth transition for paragraph text */
+.welcome p {
+    opacity: 0;
+    transform: translateY(20px); /* Start with slight vertical offset */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    line-height: 1.6;
+    font-size: 1.1rem;
+     /* Slightly increase font size for better readability */
+    color:#800080 ;
+    }
+
+/* On page load, trigger a fade-in */
+.welcome.loaded h1, .welcome.loaded p {
+    opacity: 1;
+    transform: translateY(0); /* Reset the Y-axis movement */
+}
+
+/* Add subtle hover effect on paragraph for better interaction */
+.partner {
+    padding: 5%;
+    font-family: Arial, sans-serif;
+    background-color: #e7b0f8;
+    text-align: center;
+
+}
+
+.partner h1 {
+    color: #0052CC;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.partner-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.text {
+    color: #0052CC;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Icon background colors */
+.pink { background-color: #FF4173; }
+.green { background-color: #7ED957; }
+.orange { background-color: #FF8C32; }
+.blue { background-color: #4A90E2; }
+.yellow { background-color: #FDD835; }
+.light-blue { background-color: #5CC5E2; }
+.purple { background-color: #A97EF2; }
+.dark-pink { background-color: #FF5EBB; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .partner-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 95%;
+    }
+    .icon {
+        width: 70px;
+        height: 70px;
+    }
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+    .text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+    .icon img {
+        width: 35px;
+        height: 35px;
+    }
+    .text {
+        font-size: 13px;
+    }
+}
+
+/* Gallery Section */
+.gallery-container {
+    text-align: center;
+    padding:  5%;
+    background: linear-gradient(to bottom, rgb(228, 217, 225), rgb(195, 34, 91));
+    /* background: url('bg4.jpg') no-repeat center center/cover fixed; */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-box {
+    background: #e7b0f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box:hover {
+    transform: scale(1.05);
+}
+
+.image-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.image-description {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.franchise {
+    padding: 10%;
+    background-color: #e7b0f8; /* Subtle background to make the section stand out */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.franchise:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.FranchiseCard {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px; /* Space between cards */
+    background-color: #e7b0f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.FranchiseCard:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+}
+
+.Add-Content {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.Add-Content h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.Add-Content h2:hover {
+    color: #3498db; /* A warm color on hover */
+}
+
+.Add-Content img {
+    border-radius: 15px;
+    width: 50%;
+    height: auto;
+    transition: transform 0.3s ease; /* Add zoom effect */
+}
+
+.Add-Content img:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+}
+
+.Description {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.Description h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.Description h2:hover {
+    color: #3a5eff;
+}
+
+.Description p {
+    font-family: 'Verdana', sans-serif;
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.Description p:hover {
+    color: #333; /* Darker text color when hovered */
+}
+
+.address {
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    color: #777;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.address:hover {
+    color: #333; /* Change address color on hover */
+}
+
+/* Add responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .FranchiseCard {
+        flex-direction: column;
+    }
+
+    .Add-Content, .Description {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+    .franchise-image {
+        margin-bottom: 20px; /* Add some space between image and text on mobile */
+    }
+}
+
+/* Franchise Images */
+.popup {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.popup:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph Styling */
+.Description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+.Description p:hover {
+    color: #222;
+}
+
+/* About Us Section */
+/* REMOVE this part if JavaScript is not used */
+.about-us {
+    opacity: 1;
+    transform: translateY(0);
+    border: 2px solid black;
+    background: #e7b0f8;
+    padding: 40px;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+}
+.container3 {
+    background: #e7b0f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 8%;
+    /* Test Background */
+    min-height: 80vh;
+    position: relative; /* Temporary background */
+}
+
+.about-us:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styling */
+
+
+/* Paragraph Styling */
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e78a00;
+}
+
+
+/* Founder Container */
+#founder-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Background Video */
+#founder-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage */
+    z-index: -2;
+}
+
+/* Overlay for better readability */
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: -1;
+}
+
+/* Content Wrapper */
+.founder-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Title */
+.founder-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000; /* Glowing effect */
+}
+
+/* Founder Cards */
+.founder-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Founder Box */
+.founder {
+    max-width: 400px;
+    background: #918c8c(125, 120, 120, 0.689); /* Light background for better visibility */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Founder Image */
+.founder-img {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 150px;
+    border: 3px solid #000000; /* Highlighted border */
+}
+
+/* Founder Text */
+.inner-founder h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.inner-founder p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .founder-content h2 {
+        font-size: 2rem;
+    }
+
+    .founder {
+        max-width: 90%;
+    }
+}
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+    background-color: #dedede;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0a1d9a;
+}
+
+.logo span {
+    color: rgb(207, 105, 17);
+}
+
+.footer-container a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.footer-container p,h3 {
+    margin: 10px 0;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.footer-section h3{
+    color: #000;
+}
+
+.footer-bottom a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+/* Base styles for the text */
+.popup {
+    transition: transform 1s; /* Adds smooth transition */
+  }
+
+  /* Rotate and increase the size when hovered */
+  .popup:hover {
+    transform:  scale(1.2); 
+  }
+ 
