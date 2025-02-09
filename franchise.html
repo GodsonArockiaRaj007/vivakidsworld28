@@ -17,9 +17,8 @@
             justify-content: center;
             height: 100vh;
         }
-        
+
         .contact-container {
-            
             max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
@@ -34,16 +33,16 @@
             z-index: 10;
             gap: 20px;
         }
-        
+
         .contact-container img {
-            
             margin-right: 20%;
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             height: auto;
             border-radius: 10px;
             object-fit: cover;
         }
-        
+
         .quote-bubble {
             position: absolute;
             top: 50%;
@@ -60,11 +59,12 @@
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
-        .form-color{
+
+        .form-color {
             border: solid 2px #662d91;
             border-radius: 20px;
             padding: 10%;
-            width: 200%;
+            width: 100%;
             background-color: #662d91;
         }
     </style>
@@ -73,28 +73,33 @@
     <div id="quoteContainer"></div>
 
     <div class="container contact-container" id="contactContainer">
-        <img src="Screenshot 2025-02-08 104830.png" alt="Contact Image">
-        <div>
-            <div class="form-color">
-            <h2 class="text-center">Contact Us</h2>
-            <form id="contactForm">
-                <div class="mb-3">
-                    <label class="form-label">Name</label>
-                    <input type="text" class="form-control" required>
+        <div class="row w-100">
+            <div class="col-md-6">
+                <img src="Screenshot 2025-02-08 104830.png" alt="Contact Image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <div class="form-color">
+                    <h2 class="text-center text-white">Contact Us</h2>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label text-white">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Message</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-light w-100" style="background-color: white;color: #662d91;">Submit</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Message</label>
-                    <textarea class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-100" style="background-color: white;color: #662d91;">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
-</div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const quotes = [
@@ -102,7 +107,7 @@
                 "The best way to predict the future is to create it with a franchise.",
                 "Owning a franchise means you're in business for yourself, but not by yourself."
             ];
-            
+
             const quoteContainer = document.getElementById("quoteContainer");
             let index = 0;
 
