@@ -106,24 +106,21 @@ body {
     
     height: auto;
 }
-
 .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    background-color: #ffffff;
 }
 
-/* Navbar styling */
 .navbar {
+    height: 70px;
     background-color: #ffffff;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    
-
 }
 
-/* Logo Image - Adjusts based on screen size */
 .logo-img {
     width: 8%;
     height: 50px;
@@ -132,14 +129,11 @@ body {
     margin-left: 13vh;
 }
 
-/* Navbar container */
 .navbar-border {
     margin-right: 17vh;
-    
     border-radius: 50px;
 }
 
-/* Navbar links */
 .navbar-nav a {
     font-size: 2.5vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -150,47 +144,65 @@ body {
 
 .navbar-nav a:hover {
     padding: 5px;
-    color: #662d91;
+    /* color: #662d91; */
     transform: scale(1.1);
+    /* border: 1px solid #662d91;
+    border-radius: 5px; */
 }
 
-/* Navbar toggler */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
 
+.navbar-toggler-icon {
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    display: block;
+    margin: 6px 0;
+}
 
-
-
-/* Navbar hover effect */
-
-
-/* Responsive Design */
 @media screen and (max-width: 992px) {
     .logo-img {
         width: 20%;
-        height: auto;
         max-height: 60px;
         margin-left: 5vh;
     }
-    
+
     .navbar-border {
         width: 100%;
         text-align: center;
         margin-left: 0;
         border-radius: 20px;
         padding: 5px 0;
+        justify-items: right;
+
     }
 
     .navbar-nav {
         flex-direction: column;
         align-items: center;
+        width: 18vh;
+        background-color: #662d91;
+
     }
 
     .navbar-nav .nav-item {
         margin: 5px 0;
+        width: 100%;
     }
 
     .navbar-nav a {
+        color: white;
         font-size: 18px;
         margin: 5px 0;
+        display: block;
+        width: 100%;
+        padding: 10px;
     }
 }
 
@@ -240,7 +252,7 @@ body {
     position: absolute;
     padding-top: 10%;
     top: 10%;
-    left: 5%;
+    left: 1%;
     margin: 0;
     width: 60%;
 }
@@ -580,7 +592,9 @@ p {
         max-width: 300px;
         height: 300px;
     }
-
+    .circle-item:hover ~ .center-content {
+        display: block;
+    }
     .circle-item {
         width: 60px;
         height: 60px;
@@ -601,15 +615,32 @@ p {
     }
 
     .circle-item {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
 
     .center-content {
         width:80%;
+        
 }
 }
+/* .circle-item:hover ~ .center-content {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+} */
 
+/* Responsive adjustments for center content */
+/* @media (max-width: 768px) {
+   
+} */
+
+/* On smaller screens */
+/* @media (max-width: 480px) {
+    .circle-item:hover ~ .center-content {
+        display: block;
+    }
+} */
   /* }
 
 /* .about-container {
@@ -805,19 +836,14 @@ p {
     padding: 25px;
     max-width: 50%;
     margin: auto;
-   
     border-radius: 12px;
     text-align: center;
-  
 }
-
-
 
 .contact-container h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #800080;
     font-weight: bold;
-
     font-size: 24px;
     margin-bottom: 15px;
 }
@@ -841,6 +867,7 @@ p {
 
 .contact-info a {
     color: #007BFF;
+    text-align: left;
     text-decoration: none;
     font-weight: 500;
 }
@@ -877,4 +904,38 @@ p {
 .social-icon:hover {
     transform: scale(1.1);
     opacity: 0.8;
+}
+
+/* Responsiveness with Bootstrap */
+@media (max-width: 992px) {
+    .contact-container {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        max-width: 90%;
+    }
+
+    .contact-info p {
+        font-size: 14px; /* Slightly smaller text on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-container {
+        max-width: 100%; /* Full width on very small screens */
+        padding: 15px; /* Slightly reduce padding */
+    }
+
+    .contact-info p {
+        font-size: 12px; /* Even smaller text */
+    }
+
+    .social-icon {
+        font-size: 20px; /* Smaller social icon size */
+        width: 40px;
+        height: 40px;
+    }
 }
