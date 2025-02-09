@@ -26,31 +26,31 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    padding-top: 88px;
+    padding-top: 50px;
     padding-bottom: 68px;
 }
-
-
 
 .fixed-footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #800080;/* Purple Background */
+    height: 55px; /* Compact footer */
+    background-color: #800080; 
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    padding: 8px 0;
-    
+    padding: 6px 0;
 }
 
 .action-buttons {
     display: flex;
+    height: 40px; /* Adjusted height */
     align-items: center;
-    background:#e7b0f8; 
+    background: #e7b0f8;
     border-radius: 20px;
+    
 }
 
 .btn {
@@ -59,29 +59,38 @@ body {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-weight: bold;
+    padding: 0 15px;
+    min-width: 180px;
+    justify-content: center; 
+    gap: 6px; /* Space between icon and text */
 }
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Ensures the icon and text stay in a row */
+}
+
+.btn img {
+    width: 30px; /* Smaller icon */
+    height: 30px;
+}
+
+.btn p {
+    color: #800080;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 14px; /* Adjusted font size */
+    margin: 0;
+}
+
 .btn:hover {
-   
-    transform: scale(1.05); /* Slight scaling effect */
-}
-
-
-
-/* Add subtle shadow on hover */
-
-.icons {
-    width: 20px;
-    height: 20px;
-
-    margin-right: 8px;
-}
-.icons p{
-    width: 2vh;
+    transform: scale(1.05);
 }
 
 .divider {
     width: 2px;
-    height: 30px;
+    height: 25px;
     background-color: rgb(0, 0, 0);
 }
 
@@ -91,10 +100,10 @@ body {
 }
 
 .footer-logo img {
-    width: 50px; /* Adjust logo size */
+    width: 45px;
     height: auto;
 }
-/* Ensure header is fixed and spans full width */
+
 .fixed-header {
     position: fixed;
     top: 0;
@@ -113,27 +122,27 @@ body {
 
 /* Logo Image - Adjusts based on screen size */
 .logo-img {
-    width: 13%;
-    height: auto;
+    width: 8%;
+    height: 50px;
     max-height: 70px;
     transition: transform 0.3s ease-in-out;
+    margin-left: 20vh;
 }
 
 /* Navbar container */
 .navbar-border {
-    margin-left: 15px;
+    margin-right: 17vh;
     background-color: #800080;
     border-radius: 50px;
-    padding: 5px 15px;
 }
 
 /* Navbar links */
 .navbar-nav a {
-    font-size: 20px;
+    font-size: 2vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
-    margin: 5px 10px;
     transition: color 0.3s ease, transform 0.3s ease;
+    margin-right: 4vh;
 }
 
 .navbar-nav a:hover {
@@ -284,77 +293,63 @@ body {
         width: 90%;
     }
 }
-.about-us-container{
+.about-us{
     width: 100%;
     height:150vh; /* Full viewport height */
     position: relative;
-    background-image: url(pink2.png);
+    padding: 5% 0;
+    background-image: url('pink1.png'); /* Ensure correct file path */
     background-size: cover; /* Cover entire container */
     background-position: center; /* Center the image */
-    background-repeat: no-repeat; 
-}
-.about-us-container p{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #800080;
-    text-align: left;
-}
-.points{
-    width: 60%;
-}
-.points p{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #800080;
-    text-align: left;
-    
-    
-}
-.about-us-container h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    color: #800080;
-    
-}
-.about-us-container h2{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    color: #800080;
-    
-}
-.about-us{
-   
-    justify-items: right;
-    width: 100%;
-    padding-right: 15%;
-}
-.about-us-side-heading, .about-us-content, .points {
-    width: 45%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #800080;
+    background-repeat: no-repeat; /* Prevent tiling */
 }
 
-.about-us-content p, .points p{
-    text-align: justify;
+.about-section{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.about-img{
+    width: 40%;
+  
+}
+.about-content{
+    width:60%
+}
+.about-us-contaiiner p,h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
-.about-us-heading ,.program-container h1{
+.philosophy-section{
     text-align: center;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #800080;
-    padding: 3%;
+    display: flex;
+    flex-direction: row;
 }
-.about-us-ending h1{
-    text-align: center;
+.philosophy-img{
+    width: 40%;
+}
+.philosophy-content{
+    width:60%
+}
 
+.about-us h1{
+    margin-top: 10%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #800080;
-    font-style: italic;
-    font-size: 35px;
-    
+    margin-right: 10%;
 }
-
+.about-us p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #800080;
+    margin-right: 10%;
+    margin-top: 3%;   
+}
+.philosophy-img img,.about-img img{
+    border-radius: 30px;
+}
 .program-container{
     width: 100%;
-    height:150vh; /* Full viewport height */
+    height:200vh; /* Full viewport height */
     position: relative;
     padding: 5% 0;
     background-image: url(pink1.png);
@@ -362,6 +357,28 @@ body {
     background-position: center; /* Center the image */
     background-repeat: no-repeat; 
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.program-container h4
+
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #800080;
+    text-align: center;
+
+    padding: 3px;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+.program-container h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #800080;
+    text-align: center;
+
+    padding: 3px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: bold;
 }
 .program-container p{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -379,10 +396,11 @@ body {
     gap: 20px;
     flex-wrap: wrap;
 }
+
 .program {
     position: relative;
     width: 20%;
-    height: 25%;
+    min-width: 250px;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -392,11 +410,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .program img {
     width: 100%;
-    height: 82%;
+    aspect-ratio: 16/9;
     object-fit: cover;
 }
+
 .program .label {
     background-color: #800080;
     color: white;
@@ -404,30 +424,156 @@ body {
     text-align: center;
     font-weight: bold;
     width: 100%;
+    z-index: 2;
+    position: relative;
 }
+
 .description {
     position: absolute;
-    top: 0;
+    bottom: -100%; /* Initially hidden below the container */
     left: 0;
     width: 100%;
     height: 100%;
-    background: #e7b0f8;
-    color:#800080;
+    background: rgba(231, 176, 248, 0.95);
+    color: #800080;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
     box-sizing: border-box;
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s;
     font-size: 2vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
+    z-index: 1;
+    padding-bottom: 50px;
+    transition: bottom 0.5s ease-in-out; /* Smooth transition */
 }
+
 .program:hover .description {
-    opacity: 1;
+    bottom: 0; /* Moves up to reveal description */
 }
+
+  
+/* General Container */
+.container {
+    margin-top: 5%;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Left Section */
+.content {
+    flex: 1;
+   
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: #800080;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #800080;
+    padding-right: 15%;
+    padding-left: 8%;
+}
+
+#dynamic-content {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #800080;
+}
+.container {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle-container {
+    position: relative;
+    width: 60%;
+    height: 50%;
+  }
+
+  .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .circle-item {
+    font-size: 1.2rem; /* Increases the text size inside the circles */
+    font-weight: bold; 
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid #800080;
+    transition: transform 0.3s ease;
+  }
+  .center-content h3{
+    font-weight: bold;
+    font-size: 3vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .center-content p{
+    
+    font-size: 2.5vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .circle-item img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Properly space the circles in a circular format */
+  .circle-item:nth-child(1) { top: 5%; left: 45%; transform: translate(-50%, -50%); }
+  .circle-item:nth-child(2) { top: 25%; left: 70%; transform: translate(-50%, -50%); }
+  .circle-item:nth-child(3) { top:70%; left: 70%; transform: translate(-50%, -50%); }
+  .circle-item:nth-child(4) { top: 95%; left: 45%; transform: translate(-50%, -50%); }
+  .circle-item:nth-child(5) { top: 70%; left: 20%; transform: translate(-50%, -50%); }
+  .circle-item:nth-child(6) { top: 25%; left: 20%; transform: translate(-50%, -50%); }
+
+  /* Center Content Box */
+  .center-content {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+   
+    color: #800080;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    display: none;
+    width: 60%;
+    max-width: 400px;
+  }
+  /* }
+
 /* .about-container {
     position: relative; 
     width: 90%; 
@@ -455,12 +601,77 @@ body {
     margin-bottom:25px;
 
 } */
-
-.achivement-container{
+ .achive-heading h6{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #800080;
+ }
+.achive-heading h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #800080;
+    font-weight: bold;
+   
+}.achievement-container {
     width: 100%;
-    height:150vh; /* Full viewport height */
+    height: 100vh; /* Full viewport height */
     position: relative;
     padding: 5% 0;
+    background-image: url(pink1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.scroll-wrapper {
+    display: flex;
+    gap: 10px;
+    width: max-content; /* Allow infinite scrolling */
+    animation: scrollAnimation 90s linear infinite; /* Smooth continuous scrolling */
+}
+
+/* Adjusted Image Size */
+.scroll-wrapper img {
+    width: 22vw; /* Ensures 4 images fit in the viewport */
+    height: auto;
+    border-radius: 30px;
+    flex-shrink: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: transform 1s ease-in-out;
+}
+
+/* Continuous scrolling animation */
+@keyframes scrollAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Scrolls half of the duplicated images */
+    }
+}
+
+/* Hover Effect: Slight Scale on Hover */
+.scroll-wrapper img:hover {
+    transform: scale(1.05);
+}
+
+.achive-content{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #800080;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.founder-container{
+    width: 100%;
+    height:80vh; /* Full viewport height */
+    position: relative;
+    padding: 3% 0;
     background-image: url(pink1.png);
     background-size: cover; /* Cover entire container */
     background-position: center; /* Center the image */
@@ -468,44 +679,37 @@ body {
     align-items: center;
     
 }
-
-.Slide-show-container{
-    display: flex;
-             justify-content: center; 
-             align-items: center;
-             
-             height: 100vh; 
-             overflow: hidden; 
+.founder-img{
+    width: 40%;
 }
-  .slideshow-container { 
-    position: relative; 
-    width:70vw; 
-    height: 90vh;
-    align-items: center;
-    
- }
-.slides { 
-    display: none; width: 100%; height: 100vh; object-fit: cover; }
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background:#e7b0f8;
-    opacity: 0.6;
-    border: none;
-    border-radius: 100%;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
+.founder-item{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.founder-img img{
+    border-radius: 5px;
+    width: 60%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.founder-content{
+    width: 60%;
+}
+.founder-content p{
+    text-align: left;
+    margin-top: 6%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.3vh;
+    padding-right: 10%;
     color: #800080;
 }
-.prev { left: 10px; }
-.next { right: 10px; }
-
-
-
-
+.founder-head{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #800080;
+    text-align: center;
+}
 /* Base styles for the text */
 .popup {
     transition: transform 1s; /* Adds smooth transition */
@@ -513,7 +717,7 @@ body {
 
   /* Rotate and increase the size when hovered */
   .popup:hover {
-    transform:  scale(1.2); 
+    transform:  scale(1.1); 
   }
  
   @keyframes appear{
@@ -528,3 +732,84 @@ body {
     }
 
   }
+
+
+/* Contact Box */
+.contact-container {
+    background: white;
+    padding: 25px;
+    max-width: 50%;
+    margin: auto;
+   
+    border-radius: 12px;
+    text-align: center;
+  
+}
+
+
+
+.contact-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #800080;
+    font-weight: bold;
+
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Contact Information */
+.contact-info p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 12px 0;
+    font-size: 16px;
+    color: #800080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-info i {
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    padding: 12px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+/* Social Media Icon Colors */
+.instagram { background: #E1306C; }
+.twitter { background: #1DA1F2; }
+.facebook { background: #1877F2; }
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
