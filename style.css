@@ -36,7 +36,7 @@ body {
     left: 0;
     width: 100%;
     height: 55px; /* Compact footer */
-    background-color: #662d91; 
+    background-color: #17395c; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +77,7 @@ body {
 }
 
 .btn p {
-    color: #662d91;
+    color: #17395c;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 14px; /* Adjusted font size */
@@ -122,8 +122,8 @@ body {
 }
 
 .logo-img {
-    width: 8%;
-    height: 50px;
+    width: 10%;
+    height: 65px;
     max-height: 70px;
     transition: transform 0.3s ease-in-out;
     margin-left: 13vh;
@@ -137,7 +137,7 @@ body {
 .navbar-nav a {
     font-size: 2.5vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #662d91;
+    color: #17395c;
     transition: color 0.3s ease, transform 0.3s ease;
     margin-right: 4vh;
 }
@@ -146,6 +146,7 @@ body {
     padding: 5px;
     /* color: #662d91; */
     transform: scale(1.1);
+    color: #17395c;
     /* border: 1px solid #662d91;
     border-radius: 5px; */
 }
@@ -187,7 +188,7 @@ body {
         flex-direction: column;
         align-items: center;
         width: 18vh;
-        background-color: #662d91;
+        background-color: #17395c;
 
     }
 
@@ -235,8 +236,9 @@ body {
 }
   /* Large Screen Styles */
   .LandingPage {
-    width: 100%;
-    height: 100vh;
+  margin-left: 5%;
+    width: 89%;
+    height: 90vh;
     position: relative;
     background-image: url('back1.jpg');
     background-size: cover;
@@ -245,14 +247,14 @@ body {
 }
 
 .LandingPage h3 {
-    color: #662d91;
+    color: #17395c;
     font-size: 90px;
     font-weight: bolder;
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: absolute;
-    padding-top: 10%;
-    top: 10%;
-    left: 1%;
+    /* padding-top: 5%; */
+   
+    /* left: 1%; */
     margin: 0;
     width: 60%;
 }
@@ -285,7 +287,7 @@ body {
 .about-us h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    color:#662d91 ;
+    color:#17395c ;
 }  
 .about-us h2,.about-us p{
     color: #17395c;
@@ -293,7 +295,7 @@ body {
 }
   /* About Us Section */
 .about-us {
-     color: #662d91;
+     color: #17395c;
     width: 100%;
     padding: 60px 10%;
 }
@@ -307,7 +309,7 @@ body {
 
 /* Image Styling */
 .image-container {
-    margin-left: 15%;
+    /* margin-left: 15%; */
     position: relative;
     width: 100%;
     max-width: 450px;
@@ -335,7 +337,7 @@ body {
 
 .philosophy-content h1 {
     font-size: 32px;
-    color: #662d91; /* Dark Violet */
+    color: #17395c; /* Dark Violet */
     font-weight: bold;
     text-align: center;
 }
@@ -385,28 +387,25 @@ body {
     background-repeat: no-repeat; 
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.play-school {
-    padding: 50px 20px;
-}
+
 
 .play-school-content h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    color:#662d91 ;
+    color:#17395c ;
 }
 .play-school-content h2{
     text-align: center;
-    color: #662d91;
+    color: #17395c;
     margin-top: 5%;
 }
 
 .play-school-content p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 10px;
+   
     text-align: justify;
     color: #17395c;
-    padding-left: 20%;
-    padding-right: 20%;
+   
     font-size: 2.5vh;
     line-height: 1.8;
 }
@@ -414,7 +413,7 @@ body {
     width: 100%;
     height: auto;
     position: relative;
-    padding: 5% 0;
+    /* padding: 5% 0; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-size: cover;
     background-position: center;
@@ -423,12 +422,13 @@ body {
 
 .play-school-content h1, .play-school-content h2 {
     text-align: center;
-    color: #662d91;
+    color: #17395c;
 }
 
 .play-school-content p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 10px 15%;
+    padding-left: 5%;
+    padding-top: 2%;
     color: #17395c;
     font-size: 2.5vh;
     line-height: 1.8;
@@ -469,11 +469,12 @@ body {
 .flip-box-back {
     background-color: white;
     color: #17395c;
-    border: 4px solid #662d91; /* Dark Blue Border */
+    border: 4px solid #17395c; /* Dark Blue Border */
     display: flex;
     align-items: center;
+    text-align: justify;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     transform: rotateY(180deg);
 }
 
@@ -513,7 +514,7 @@ button:hover {
 /* Left Section */
 h1 {
     font-size: 2rem;
-    color: #662d91;
+    color: #17395c;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -551,7 +552,7 @@ p {
     align-items: center;
     background-color: white;
     border-radius: 50%;
-    border: 3px solid #800080;
+    border: 3px solid #17395c;
     transition: transform 0.3s ease;
 }
 
@@ -671,12 +672,12 @@ p {
 
 } */.achive-heading h6 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #662d91;
+    color: #17395c;
 }
 
 .achive-heading h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #662d91;
+    color: #17395c;
     font-weight: bold;
 }
 
@@ -702,12 +703,13 @@ p {
     line-height: 1.8;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 /* Carousel Section */
 .scroll- {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto; /* Adjust height dynamically */
+    padding: 10px 0;
 }
 
 /* Carousel Container */
@@ -716,22 +718,24 @@ p {
     overflow: hidden;
     position: relative;
     border-radius: 10px;
+    max-height: 250px; /* Default height */
 }
 
 /* Carousel Track */
 .carousel-track {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     animation: scroll 15s linear infinite;
     will-change: transform;
 }
 
 /* Individual Images */
 .carousel-image {
-    width: calc(33.33% - 15px);
+    width: calc(33.33% - 10px);
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 10px;
+    height: 300px; /* Default height */
 }
 
 /* Smooth Scroll Animation */
@@ -778,7 +782,7 @@ p {
 
 
 .founder-container {
-    margin-top: 5%;
+    /* margin-top: 5%; */
     width: 100%;
     height: auto;
     padding: 3% 0;
@@ -803,7 +807,7 @@ p {
 
 .founder-head {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #662d91;
+    color: #17395c;
     text-align:center;
 }
 /* Base styles for the text */
@@ -829,7 +833,6 @@ p {
 
   }
 
-
 /* Contact Box */
 .contact-container {
     background: white;
@@ -840,36 +843,39 @@ p {
     text-align: center;
 }
 
-.contact-container h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #800080;
-    font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 15px;
+/* Contact Information */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keep content centered */
+    text-align: left;
+    gap: 10px;
 }
 
-/* Contact Information */
 .contact-info p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 12px 0;
     font-size: 16px;
-    color: #800080;
+    color: #17395c;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .contact-info i {
     color: #007BFF;
     font-size: 18px;
+    min-width: 25px;
+    text-align: center;
 }
 
+/* Align links properly */
 .contact-info a {
     color: #007BFF;
-    text-align: left;
     text-decoration: none;
     font-weight: 500;
+    flex-grow: 1;
 }
 
 .contact-info a:hover {
@@ -878,17 +884,22 @@ p {
 
 /* Social Media Links */
 .social-links {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 22%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+    gap: 30px; /* Ensure spacing between icons */
 }
 
+/* Social Media Icon Styling */
 .social-icon {
     font-size: 24px;
-    margin: 0 10px;
     padding: 12px;
     border-radius: 50%;
     color: white;
     text-decoration: none;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 45px;
@@ -906,7 +917,7 @@ p {
     opacity: 0.8;
 }
 
-/* Responsiveness with Bootstrap */
+/* Responsive Fixes */
 @media (max-width: 992px) {
     .contact-container {
         max-width: 80%;
@@ -919,22 +930,22 @@ p {
     }
 
     .contact-info p {
-        font-size: 14px; /* Slightly smaller text on smaller screens */
+        font-size: 14px;
     }
 }
 
 @media (max-width: 576px) {
     .contact-container {
-        max-width: 100%; /* Full width on very small screens */
-        padding: 15px; /* Slightly reduce padding */
+        max-width: 100%;
+        padding: 15px;
     }
 
     .contact-info p {
-        font-size: 12px; /* Even smaller text */
+        font-size: 12px;
     }
 
     .social-icon {
-        font-size: 20px; /* Smaller social icon size */
+        font-size: 20px;
         width: 40px;
         height: 40px;
     }
