@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Opportunity</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #17395c;
+            color: white;
+            overflow: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-top: 50px;
+        }
+        html {
+    scroll-behavior: smooth;
+}
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        .left-section {
+            flex: 1;
+            margin-right: 30px;
+        }
+
+        .right-section {
+            background: white;
+            padding: 20px 20px;
+            border-radius: 15px;
+            width: 45%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .right-section h2 {
+            text-align: center;
+            color: #17395c;
+            margin-bottom: 15px; /* Added slight space below heading */
+        }
+
+        .form-control {
+            border-radius: 20px;
+            padding: 8px;
+            font-size: 0.9rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 10px;
+        }
+
+        .mb-3.d-flex {
+            display: flex;
+            gap: 10px;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 150px;
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .left-section,
+            .right-section {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .right-section {
+                width: 100%;
+                min-height: auto;
+                overflow-y: auto;
+            }
+
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat-box {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+        
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+
+.navbar {
+    height: 70px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img {
+    width: 10%;
+    height: 65px;
+    max-height: 70px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 13vh;
+}
+
+.navbar-border {
+    margin-right: 17vh;
+    border-radius: 50px;
+}
+
+.navbar-nav a {
+    font-size: 2.5vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #17395c;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-right: 4vh;
+}
+
+.navbar-nav a:hover {
+    padding: 5px;
+    /* color: #662d91; */
+    transform: scale(1.1);
+    color: #17395c;
+    /* border: 1px solid #662d91;
+    border-radius: 5px; */
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    display: block;
+    margin: 6px 0;
+}
+
+@media screen and (max-width: 992px) {
+    .logo-img {
+        width: 20%;
+        max-height: 60px;
+        margin-left: 5vh;
+    }
+
+    .navbar-border {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        border-radius: 20px;
+        padding: 5px 0;
+        justify-items: right;
+
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        width: 18vh;
+        background-color: #17395c;
+
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .navbar-nav a {
+        color: white;
+        font-size: 18px;
+        margin: 5px 0;
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-img {
+        width: 25%;
+        max-height: 50px;
+        margin-left: 3vh;
+    }
+
+    .navbar-border {
+        padding: 8px 0;
+    }
+
+    .navbar-nav a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo-img {
+        width: 30%;
+        max-height: 45px;
+        margin-left: 2vh;
+    }
+
+    .navbar-nav a {
+        font-size: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="fixed-header">
+        <header class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <img src="logowhite.jpg" style="margin-top: 0%;" alt="Logo" class="logo-img">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <div class="navbar-border">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#aboutus">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#littlescholors">Little Scholars</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#achivement">Achievements</a></li>
+                            <li class="nav-item"><a class="nav-link" href="franchise.html">Franchise</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#founder">Founder</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="container" id="mainContent">
+        <div class="left-section">
+            <h1>Franchise Opportunity</h1>
+            <p>Start your own Kidzee preschool today! All you need is a 2000-3000* sq. feet space and an investment ₹15-16 lakhs*</p>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>2000+</h3>
+                    <p>Centers</p>
+                </div>
+                <div class="stat-box">
+                    <h3>750+</h3>
+                    <p>Cities</p>
+                </div>
+                <div class="stat-box">
+                    <h3>20+</h3>
+                    <p>Years of Legacy</p>
+                </div>
+                <div class="stat-box">
+                    <h3>20+</h3>
+                    <p>Million Students</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <h2>Enquire Now</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="First Name *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Last Name *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email *" required>
+                </div>
+                <div class="mb-3 d-flex">
+                    <input type="text" class="form-control me-2" placeholder="Phone Number *" required>
+                    <input type="text" class="form-control" placeholder="Pin Code *" required>
+                </div>
+                <div class="mb-3 d-flex">
+                    <input type="text" class="form-control me-2" placeholder="State/District *" required>
+                    <input type="text" class="form-control" placeholder="City *" required>
+                </div>
+                <div class="mb-3 d-flex">
+                    <input type="text" class="form-control me-2" placeholder="Country *" required>
+                    <input type="text" class="form-control" placeholder="Location *" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+            const mainContent = document.getElementById("mainContent");
+
+            // Fade-in effect for the main content
+            setTimeout(() => {
+                mainContent.style.opacity = "1";
+                mainContent.style.transform = "translateY(0)";
+            }, 500);
+        });
+    </script>
+</body>
+</html>
