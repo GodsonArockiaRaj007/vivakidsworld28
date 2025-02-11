@@ -236,14 +236,37 @@ body {
 }
   /* Large Screen Styles */
   .LandingPage {
-  margin-left: 5%;
+  margin-left: 4%;
     width: 89%;
-    height: 90vh;
+    height: 85vh;
     position: relative;
     background-image: url('back1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.container3 {
+    width: 55%;
+    margin-top: 25%;
+    display: flex;
+    gap: 10px;
+}
+.card3 {
+    background: white;
+    padding: 20px;
+    border: solid 3px #17395c;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 8px #17395c; */
+    text-align: center;
+    width: 180px;
+}
+.card3 img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+.card3 p {
+    font-weight: bold;
+    color: #17395c;
 }
 
 .LandingPage h3 {
@@ -258,6 +281,26 @@ body {
     margin: 0;
     width: 60%;
 }
+
+/* Medium Screens */
+@media (max-width: 1024px) {
+    .card3 {
+        width: 30%; /* Adjusts width for tablets */
+    }
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .container3 {
+        flex-direction: column; /* Stacks items on smaller screens */
+        align-items: center; /* Centers items */
+    }
+
+    .card3 {
+        width: 80%; /* Takes most of the screen width */
+    }
+}
+
 
 /* Small Screen Styles */
 @media (max-width: 768px) {
@@ -297,7 +340,7 @@ body {
 .about-us {
      color: #17395c;
     width: 100%;
-    padding: 60px 10%;
+    padding: 30px 10%;
 }
 
 .philosophy-section {
@@ -364,7 +407,7 @@ body {
 @media (max-width: 992px) {
     .philosophy-section {
         flex-direction: column;
-        text-align: center;
+        text-align: justify;
     }
 
     .image-container {
@@ -372,13 +415,13 @@ body {
     }
 
     .philosophy-content {
-        text-align: center;
+        text-align: justify;
     }
 }
 
 .program-container{
     width: 100%;
-    height:150vh; 
+    height:140vh; 
     position: relative;
     padding: 5% 0;
     /* background-image: url(pink1.png); */
@@ -393,14 +436,17 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     color:#17395c ;
-}
-.play-school-content h2{
+}.play-school-content
+{
+    padding: 30px 10%;
+}.play-school-content h2{
     text-align: center;
     color: #17395c;
     margin-top: 5%;
 }
 
 .play-school-content p {
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
    
     text-align: justify;
@@ -508,7 +554,7 @@ button:hover {
 .container {
     max-width: 1200px;
     width: 100%;
-    padding: 20px;
+    /* padding: 10px; */
 }
 
 /* Left Section */
@@ -589,6 +635,11 @@ p {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .container p{
+        font-size: 2vh;
+        padding: 8%;
+    }
+
     .circle-container {
         max-width: 300px;
         height: 300px;
@@ -670,15 +721,11 @@ p {
     margin-right: 20px;
     margin-bottom:25px;
 
-} */.achive-heading h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #17395c;
-}
-
+} *//* General Styles */
+.achive-heading h6, 
 .achive-heading h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #17395c;
-    font-weight: bold;
 }
 
 /* Achievement Container */
@@ -691,7 +738,6 @@ p {
     background-repeat: no-repeat;
     align-items: center;
     overflow: hidden;
-    padding: 50px 0;
 }
 
 /* Content Styling */
@@ -703,12 +749,13 @@ p {
     line-height: 1.8;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 /* Carousel Section */
 .scroll- {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; /* Adjust height dynamically */
+    height: auto;
     padding: 10px 0;
 }
 
@@ -718,7 +765,7 @@ p {
     overflow: hidden;
     position: relative;
     border-radius: 10px;
-    max-height: 250px; /* Default height */
+    max-height: 250px;
 }
 
 /* Carousel Track */
@@ -735,7 +782,7 @@ p {
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 10px;
-    height: 300px; /* Default height */
+    height: 300px;
 }
 
 /* Smooth Scroll Animation */
@@ -743,10 +790,83 @@ p {
     from {
         transform: translateX(0%);
     }
-    to{
+    to {
         transform: translateX(-100%);
     }
 }
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .achive-heading h1 {
+        font-size: 2.5rem; /* Reduce heading size */
+    }
+
+    .achive-content p {
+        font-size: 2vh; /* Reduce font size */
+        padding: 0 10%;
+    }
+
+    .carousel-container {
+        width: 90%; /* Slightly wider on smaller screens */
+    }
+
+    .carousel-image {
+        width: calc(50% - 10px); /* Show two images at a time */
+        height: 250px;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .achive-heading h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .achive-content p {
+        font-size: 2vh;
+        /* padding: 0 8%; */
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .carousel-container {
+        width: 95%;
+    }
+
+    .carousel-image {
+        width: calc(100% - 10px); /* Show one image at a time */
+        height: 220px;
+    }
+
+    .carousel-track {
+        animation-duration: 10s; /* Faster scrolling on small screens */
+    }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .achive-heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .achive-content p {
+        font-size: 2vh;
+        padding: 0 5%;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .carousel-image {
+        width: 100%; /* Full width */
+        height: 200px;
+    }
+}
+
 /* .scroll-wrapper {
     display: flex;
     gap: 10px;
@@ -832,6 +952,14 @@ p {
     }
 
   }
+  
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .founder-content p{
+        padding: 8%;
+        font-size: 2vh;
+    }
+}
 
 /* Contact Box */
 .contact-container {

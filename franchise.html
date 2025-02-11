@@ -3,145 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Franchise Opportunity</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background: white;
-            color: #662d91;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .contact-container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #17395c;
             color: white;
-            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .quote-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #17395c;
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            position: absolute;
-            z-index: 10;
-            gap: 20px;
-        }
-
-        .contact-container img {
-            margin-right: 20%;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 10px;
-            object-fit: cover;
+            flex-direction: column;
+            z-index: 999;
+            padding: 0 20px; /* Added padding for left and right gap */
         }
 
         .quote-bubble {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             font-style: italic;
-            color: #662d91;
-            padding: 15px 20px;
-            border-radius: 20px;
+            color: #17395c;
+            background-color: white;
+            padding: 40px 60px;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-weight: bold;
-            font-size: 2.5rem;
+            font-size: 2rem;
             text-align: center;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            position: relative;
+            border-radius: 30px;
         }
 
-        .form-color {
-            border: solid 2px #662d91;
+        .quote-bubble:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid white;
+            transform: translateX(-50%);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        .left-section {
+            flex: 1;
+        }
+
+        .right-section {
+            background: white;
+            padding: 50px 20px;
+            border-radius: 15px;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: auto; /* Added for scrolling */
+        }
+
+        .right-section h2 {
+            text-align: center;
+            color: #17395c;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
             border-radius: 20px;
-            padding: 10%;
-            width: 100%;
-            background-color: #662d91;
+            padding: 10px;
+        }
+
+        .form-label {
+            display: none;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 150px;
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .left-section,
+            .right-section {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .right-section {
+                width: 100%;
+                min-height: auto;
+                overflow-y: auto; /* Ensure scroll on mobile */
+            }
+
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat-box {
+                width: 100%;
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="quoteContainer"></div>
+    <div id="quoteContainer" class="quote-overlay"></div>
 
-    <div class="container contact-container" id="contactContainer">
-        <div class="row w-100">
-            <div class="col-md-6">
-                <img src="Screenshot 2025-02-08 104830.png" alt="Contact Image" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-                <div class="form-color">
-                    <h2 class="text-center text-white">Contact Us</h2>
-                    <form id="contactForm">
-                        <div class="mb-3">
-                            <label class="form-label text-white">Name</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Email</label>
-                            <input type="email" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Message</label>
-                            <textarea class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-light w-100" style="background-color: white;color: #662d91;">Submit</button>
-                    </form>
+    <div class="container" id="mainContent">
+        <div class="left-section">
+            <h1>Franchise Opportunity</h1>
+            <p>Start your own Kidzee preschool today! All you need is a 2000-3000* sq. feet space and an investment ₹15-16 lakhs*</p>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>2000+</h3>
+                    <p>Centers</p>
+                </div>
+                <div class="stat-box">
+                    <h3>750+</h3>
+                    <p>Cities</p>
+                </div>
+                <div class="stat-box">
+                    <h3>20+</h3>
+                    <p>Years of Legacy</p>
+                </div>
+                <div class="stat-box">
+                    <h3>20+</h3>
+                    <p>Million Students</p>
                 </div>
             </div>
+        </div>
+        <div class="right-section">
+            <h2>Enquire Now</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="First Name *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Last Name *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Mobile *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Pin Code *" required>
+                </div>
+                <div class="mb-3 d-flex">
+                    <input type="text" class="form-control me-2" placeholder="State/District">
+                    <input type="text" class="form-control" placeholder="City">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" required>
+                    <label class="form-check-label">I state that I am ready with a min investment of INR 15 - 16 Lacs*</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
         </div>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const quotes = [
-                "Franchise is not just a business, it's a proven system for success.",
-                "The best way to predict the future is to create it with a franchise.",
-                "Owning a franchise means you're in business for yourself, but not by yourself."
-            ];
+       document.addEventListener("DOMContentLoaded", function() {
+    const quotes = [
+        "Franchise is not just a business, it's a proven system for success.",
+        "The best way to predict the future is to create it with a franchise.",
+        "Owning a franchise means you're in business for yourself, but not by yourself."
+    ];
+    const quoteContainer = document.getElementById("quoteContainer");
+    const mainContent = document.getElementById("mainContent");
+    let index = 0;
 
-            const quoteContainer = document.getElementById("quoteContainer");
-            let index = 0;
-
-            function showNextQuote() {
-                if (index >= quotes.length) {
-                    // Show contact form after last quote disappears
-                    setTimeout(() => {
-                        document.getElementById("contactContainer").style.opacity = "1";
-                    }, 500);
-                    return;
-                }
-
-                let bubble = document.createElement("div");
-                bubble.classList.add("quote-bubble");
-                bubble.innerText = quotes[index];
-                quoteContainer.appendChild(bubble);
-
-                // Show quote
-                setTimeout(() => bubble.style.opacity = "1", 100);
-
-                // Hide quote and remove it after delay
+    function showNextQuote() {
+        if (index >= quotes.length) {
+            setTimeout(() => {
+                quoteContainer.style.opacity = "0"; // Fade out the quote section
                 setTimeout(() => {
-                    bubble.style.opacity = "0";
-                    setTimeout(() => {
-                        bubble.remove();
-                        index++;
-                        showNextQuote(); // Show next quote after the current one disappears
-                    }, 500);
-                },1000); // Display each quote for 2 seconds
-            }
+                    quoteContainer.style.display = "none"; // Remove quote overlay
+                    mainContent.style.opacity = "1"; // Fade in form
+                    mainContent.style.transform = "translateY(0)"; // Move it up smoothly
+                }, 500);
+            }, 1000);
+            return;
+        }
 
-            // Start showing quotes
-            showNextQuote();
-        });
+        let bubble = document.createElement("div");
+        bubble.classList.add("quote-bubble");
+        bubble.innerText = quotes[index];
+        quoteContainer.appendChild(bubble);
+
+        setTimeout(() => bubble.style.opacity = "1", 500);
+        setTimeout(() => {
+            bubble.style.opacity = "0";
+            setTimeout(() => {
+                bubble.remove();
+                index++;
+                showNextQuote();
+            }, 1000);
+        }, 3000);
+    }
+
+    showNextQuote();
+});
+
     </script>
 </body>
 </html>
