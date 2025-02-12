@@ -18,7 +18,7 @@
 </head>
 <body>
  
-    <div class="fixed-header">
+    <div class="fixed-header" id="home">
         <header class="navbar navbar-expand-lg">
             <div class="container-fluid d-flex justify-content-between align-items-center">
                 <img src="logowhite.jpg" style="margin-top: 0%;" alt="Logo" class="logo-img">
@@ -30,7 +30,7 @@
                 <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <div class="navbar-border">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" href="#littlescholors">Little Scholars</a></li>
                             <li class="nav-item"><a class="nav-link" href="#achivement">Achievements</a></li>
@@ -85,11 +85,16 @@
         </div>
     
         <div class="footer-logo">
-            <a href="#">
-                <img src="wapurple-removebg-preview.png" alt="Logo">
+            <a href="https://wa.me/8220445455">
+                <img src="wapurple-removebg-preview.png" onclick="goToWhatsApp()" alt="Logo">
             </a>
         </div>
     </div>
+    <script>
+        function goToWhatsApp() {
+            window.location.href = "https://wa.me/8220445455"; // Replace with actual WhatsApp link
+        }
+    </script>
     
     
     <div class="LandingPage">
@@ -182,21 +187,64 @@
           
         </div>
     </div>
+
+    <div class=" advantage-container mt-4">
+        <h1>Our Unique Edge</h1>
+        <div >
+            <div style="color: #17395c;  text-align: center;margin-bottom: 20px;"><h3>Managed by qualified educationist</h3></div>
+        </div>
+        <div class="row" style="margin-left: 18%;">
+            <div class="col-md-6">
+                <div class="advantage-item">Well qualified trained teacher</div>
+            </div>
+            <div class="col-md-6">
+                <div class="advantage-item">Multimedia based teaching</div>
+            </div>
+            <div class="col-md-6">
+                <div class="advantage-item">12+ Free camps (per annum)</div>
+            </div>
+            <div class="col-md-6">
+                <div class="advantage-item">Theme based teaching</div>
+            </div>
+            <div class="col-md-6">
+                <div class="advantage-item">Language development</div>
+            </div>
+            <div class="col-md-6">
+                <div class="advantage-item">Build confidence</div>
+            </div>
+            <div class="col-md-6">
+                <div class="advantage-item">Social development</div>
+            </div>
+            <div class="col-md-6">
+                <div class="advantage-item">Support different learning styles</div>
+            </div>
+           
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="Infrastructue">
+            <h1>Our Infrastructure – Safe, Modern, and Inspiring!</h1>
+            <p>Viva Kids World provides a vibrant, child-friendly environment with colorful interiors and thoughtfully designed furniture to create an engaging and safe learning space. Our centers are equipped with high-quality toys, teaching aids, and learning materials that enhance cognitive and motor skills development. The infrastructure is carefully planned to support both indoor and outdoor activities, ensuring a balanced mix of learning and play. Every piece of equipment and resource is selected to foster creativity, social interaction, and hands-on learning, making Viva Kids World a perfect place for early childhood development."</p>
+    </div>
 <!-- Bootstrap JS -->
  <div class="program-container" id="littlescholors">
         <section class="play-school">
             <div class="play-school-content">
                 <h1 style="text-align: center;">Empowering Your Child’s Journey from the First Step</h1>
-                <div style="text-align: justify; display: flex;flex-direction: row;padding: 0%;">
-                <p style="padding-left: 0%;">
-                    At Viva Kids World, we offer four structured programs—Playgroup, Nursery, Jr.KG, and Sr.KG—each designed to meet the unique developmental needs of young learners. Our programs follow a child-centered approach, allowing children to grow at their own pace while building confidence and independence. From the moment a child enters our Playgroup, they are welcomed into a safe, nurturing, and stimulating environment that encourages exploration and sensory experiences. Through colors, 
-                </p>
-                <p >
-                    textures, music, and movement, toddlers begin to develop their gross motor skills and social interactions, learning to express themselves through simple words, gestures, and creative play.
-                    As children progress to Nursery, they engage in more structured activities that strengthen pre-writing skills, language development, and cognitive abilities. With the introduction of puzzles, sorting games, and storytelling sessions, we help children develop curiosity and problem-solving skills while enhancing their communication.
-                    
-                </p>
-            </div>
+                <div class="content-container">
+                    <div class="left-column">
+                        <p>
+                            At Viva Kids World, we offer four structured programs—Playgroup, Nursery, Jr.KG, and Sr.KG—each designed to meet the unique developmental needs of young learners. Our programs follow a child-centered approach, allowing children to grow at their own pace while building confidence and independence. From the moment a child enters our Playgroup, they are welcomed into a safe, nurturing, and stimulating environment that encourages exploration and sensory experiences. Through colors, 
+                        </p>
+                    </div>
+                    <div class="right-column">
+                        <p>
+                            textures, music, and movement, toddlers begin to develop their gross motor skills and social interactions, learning to express themselves through simple words, gestures, and creative play.
+                            As children progress to Nursery, they engage in more structured activities that strengthen pre-writing skills, language development, and cognitive abilities. With the introduction of puzzles, sorting games, and storytelling sessions, we help children develop curiosity and problem-solving skills while enhancing their communication.
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="program-container1">
                 <div class="row justify-content-center g-4 mt-2">
@@ -256,66 +304,70 @@
             
         </section>
     </div>
-  
-<div class="container mt-5">
-    <div class="row align-items-center">
-        <!-- Left Section -->
-        <h1 class="fw-bold" style="color: #17395c;padding: 30px 6%;width: 80%;">Why Viva Kids World is the Ideal Choice for Your Child</h1>
-        <div class="col-lg-6 col-md-12 text-center text-lg-start">
-        
-            <p style="text-align: justify;padding: 30px 6%;">
-                At Viva Kids World, we believe in fostering a well-rounded learning experience that nurtures every aspect of a child's growth. Our approach blends academic development with creativity and life skills, creating an environment that encourages curiosity and exploration. With a team of dedicated and experienced educators, we ensure that each child receives personalized attention and care. We provide a variety of engaging activities that not only stimulate the mind but also promote emotional and social well-being. Through fun-filled events and celebrations, we create memorable experiences that enhance learning and make every day an exciting adventure for your child.
+    <div class="container">
+        <!-- Left Section (Text) -->
+        <div class="left-content">
+            <h1 style="color: #17395c;">Why Viva Kids World is the Ideal Choice for Your Child ?</h1>
+            <p style="color: #17395c;">
+                At Viva Kids World, we believe in fostering a well-rounded learning experience that nurtures every aspect of a child's growth. 
+                Our approach blends academic development with creativity and life skills, creating an environment that encourages curiosity and exploration. 
+                With a team of dedicated and experienced educators, we ensure that each child receives personalized attention and care. 
+                Through fun-filled events and celebrations, we create memorable experiences that enhance learning and make every day an exciting adventure for your child.
             </p>
         </div>
-
-        <!-- Right Section (Circle Layout) -->
-        <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
-            <div class="circle-container">
-                <div class="circle">
-                    <div class="circle-item" data-content="<h3>Holistic Learning</h3><p>Balancing academics, creativity, and life skills.</p>">
-                        <img src="pongal.jpeg" alt="Holistic Learning">
-                    </div>
-                    <div class="circle-item" data-content="<h3>Safe Environment</h3><p>Designed to encourage exploration and growth.</p>">
-                        <img src="diwali.jpeg" alt="Safe Environment">
-                    </div>
-                    <div class="circle-item" data-content="<h3>Experienced Educators</h3><p>Passionate teachers guiding early education.</p>">
-                        <img src="christmas.jpeg" alt="Experienced Educators">
-                    </div>
-                    <div class="circle-item" data-content="<h3>Fun Activities</h3><p>Storytelling, arts, and interactive learning.</p>">
-                        <img src="ramzan.jpeg" alt="Fun Activities">
-                    </div>
-                    <div class="circle-item" data-content="<h3>Comprehensive Growth</h3><p>Intellectual, emotional, and social well-being.</p>">
-                        <img src="christmas.jpeg" alt="Comprehensive Growth">
-                    </div>
-                    <div class="circle-item" data-content="<h3>Festival Celebrations</h3><p>Special events, trips, and activity days.</p>">
-                        <img src="ramzan.jpeg" alt="Festival Celebrations">
-                    </div>
+    
+        <!-- Right Section (Tree) -->
+        <div class="right-content">
+            <div class="tree-container">
+                <img src="treeexteentedpot.jpg" class="tree-image" alt="Tree">
+                
+                <!-- Circle Items -->
+                <div class="circle-item" data-content="Year-round learning support for students and parents.
+                ">
+                    <img src="365.png" alt="Holistic Learning">
+                    <p>365 Days Support App</p>
                 </div>
-                <div class="center-content" id="center-content"></div>
+                <div class="circle-item" data-content="Enhancing reading skills with phonics-based learning techniques.">
+                    <img src="phonics.png" alt="Safe Environment">
+                    <p>Phonics</p>
+                </div>
+                <div class="circle-item" data-content="Encouraging teamwork, social interaction, and community building.">
+                    <img src="socialism.png" alt="Experienced Educators">
+                    <p>Socialism</p>
+                </div>
+                <div class="circle-item" data-content="Technology-driven interactive learning for young minds.">
+                    <img src="smart-class.png" alt="Fun Activities">
+                    <p>Smart Classes</p>
+                </div>
+                <div class="circle-item" data-content=" Fun-filled camps for adventure, learning, and skill development.">
+                    <img src="camp.png" alt="Comprehensive Growth">
+                    <p>Camps</p>
+                </div>
+                <div class="circle-item" data-content=" Celebrating traditions through performances, stories, and activities.">
+                    <img src="concept-cultural.png" alt="Festival Celebrations">
+                    <p>Concept Culturals</p>
+                </div>
+    
+                <!-- Hover Content in Pot -->
+                <div class="hover-content" id="hover-content"></div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Bootstrap & JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.querySelectorAll('.circle-item').forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            const content = this.getAttribute('data-content');
-            const centerContent = document.getElementById('center-content');
-            centerContent.innerHTML = content;
-            centerContent.style.display = 'block';
+    
+    <script>
+        document.querySelectorAll('.circle-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const content = this.getAttribute('data-content');
+                const hoverContent = document.getElementById('hover-content');
+                hoverContent.innerHTML = content;
+                hoverContent.style.display = 'block';
+            });
+    
+            item.addEventListener('mouseleave', function() {
+                document.getElementById('hover-content').style.display = 'none';
+            });
         });
-
-        item.addEventListener('mouseleave', function() {
-            document.getElementById('center-content').style.display = 'none';
-        });
-    });
-</script>
-
-    <!-- </div> -->
-   
+    </script>
 <div class="container-fluid py-5">
     <div class="achivement-container-full text-center" id="achivement">
         
@@ -384,7 +436,7 @@
         <div class="row align-items-center">
             <div class="col-md-5 text-center">
                 <div class="founder-img">
-                    <img src="Screenshot 2025-02-08 104830.png" alt="" class="img-fluid">
+                    <img src="founder-img.jpg" style="border-radius: 50%;" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-7">
@@ -409,10 +461,10 @@
         <h1 style="color: #17395c;">Contact Us</h1><br>
         
         <div class="contact-info" >
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Main Street, Your City, Country</p>
-            <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +123 456 7890</p>
-            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:contact@example.com">contact@example.com</a></p>
-            <p><i class="fas fa-globe"></i> <strong>Website:</strong> <a href="https://www.example.com" target="_blank">www.example.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> No.46, 1st Cross Street, Temple City, Kanchipuram - 631502</p>
+            <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> 9790106164</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="infovivakidsworld@gmail.com">infovivakidsworld@gmail.com</a></p>
+            <p><i class="fas fa-globe"></i> <strong>Website:</strong> <a href="www.vivakidsworld.com " target="_blank">www.vivakidsworld.com </a></p>
         </div>
     
         <div class="social-links">
