@@ -26,7 +26,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     
-    padding-top: 70px;
+    padding-top: 65px;
     padding-bottom: 70px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on mobile */
@@ -250,137 +250,121 @@ html {
     .navbar-nav a {
         font-size: 15px;
     }
-}
-  /* Large Screen Styles */
-  .LandingPage {
-  
+}/* General Styles */
+.LandingPage {
     width: 95%;
-    height: 85vh;
+    height: auto;
     position: relative;
-    background-image: url('back1.jpg');
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
     padding: 30px 10%;
+    text-align: center;
 }
+/* General Styling */
+.LandingPage {
+    width: 60%;
+    text-align: left;
+    padding: 50px 0;
+    background-color: white; /* Light background like the image */
+}
+
+/* Heading */
+.LandingPage h3 {
+    color: #17395c;
+    font-size:72px;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    margin-left: 19%;
+}
+
+/* Box Container */
 .container3 {
-    width: 55%;
-    margin-top: 25%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
 }
+
+/* Individual Boxes */
 .card3 {
     background: white;
     padding: 20px;
-    border: solid 3px #17395c;
     border-radius: 12px;
-    /* box-shadow: 0 4px 8px #17395c; */
+    border: 3px solid #17395c;
     text-align: center;
     width: 180px;
+    height: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow like the reference */
 }
+
+/* Box Images */
 .card3 img {
     width: 60px;
     margin-bottom: 10px;
 }
+
+/* Text in Boxes */
 .card3 p {
     font-weight: bold;
     color: #17395c;
-}
-
-.LandingPage h3 {
-    color: #17395c;
-    font-size: 90px;
-    font-weight: bolder;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    position: absolute;
-    /* padding-top: 5%; */
-  
-    /* left: 1%; */
-    margin: 0;
-    width: 60%;
+    font-size: 14px;
 }
 
 /* Medium Screens */
 @media (max-width: 1024px) {
+    .LandingPage h3 {
+        font-size: 50px;
+    }
+    .container3 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
     .card3 {
-        width: 30%; /* Adjusts width for tablets */
+        width: 160px;
+        height: 160px;
     }
 }
 
 /* Small Screens */
-
-
-/* Small Screens */
 @media (max-width: 768px) {
-    .container3 {
-        flex-direction: row; /* Ensures cards stay in a row */
-        justify-content: center; /* Centers the cards */
-        flex-wrap: wrap; /* Allows wrapping if needed */
-        gap: 5px; /* Adjust spacing between cards */
-        width: 100%;
-        margin-top: 10%;
-    }
-
-    .card3 {
-        width: 30%; /* Adjust width so all fit in a row */
-        padding: 10px;
-    }
-
-    .card3 img {
-        width: 40px; /* Smaller icons */
-    }
-
-    .card3 p {
-        font-size: 12px;
-    }
-
-    .LandingPage {
-        background-image: none;
-        height: auto;
-        padding-top: 5%;
-    }
-
-    .small-background {
-        background-image: url('smallback.jpg');
-        background-size: cover;
-        background-position: center;
-        height: 50vh;
-        width: 100%;
-    }
-
     .LandingPage h3 {
         font-size: 40px;
-        text-align: left;
-        position: relative;
-        left: 0;
-        padding: 10px;
-        width: 100%;
+    }
+    .container3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .card3 {
+        width: 140px;
+        height: 140px;
+    }
+    .card3 img {
+        width: 50px;
     }
 }
 
 /* Extra Small Screens */
 @media (max-width: 480px) {
     .container3 {
-        flex-wrap: nowrap; /* Prevents wrapping */
-        overflow-x: auto; /* Enables horizontal scrolling if needed */
-        justify-content: flex-start;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
     }
-
     .card3 {
-        width: 32%; /* Ensures all three fit within the screen */
-        padding: 8px;
+        width: 90%;
+        margin: 0 auto;
     }
-
     .card3 img {
-        width: 35px;
+        width: 40px;
     }
-
     .card3 p {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
-
-
 .about-us h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -482,6 +466,39 @@ html {
         text-align: justify;
     }
 }
+@media (min-width: 992px) {
+    /* Ensure the row container uses flexbox */
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensures proper spacing */
+    }
+
+    /* Move the image to the right */
+    .col-lg-6.text-center {
+        display: flex;
+        justify-content: flex-end; /* Aligns the image container to the right */
+    }
+
+    /* Ensure image container has no extra margins */
+    .image-container {
+        margin: 0; /* Resets all margins */
+        padding: 0; /* Resets all paddings */
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-end; /* Moves image inside container to the right */
+    }
+
+    /* Ensure the image itself aligns properly */
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Removes extra spacing from inline elements */
+        margin: 0; /* Ensures no unwanted margins */
+    }
+}
+
+
 
 .program-container{
     width: 100%;
@@ -659,7 +676,7 @@ p {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 25px;
 }
 
 /* Circle Items */

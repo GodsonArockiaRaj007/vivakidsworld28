@@ -3,341 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franchise Opportunity</title>
+    <title>Play School Admissions</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: #17395c;
             color: white;
-            overflow: hidden;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            padding-top: 100px;
-        }
-        html {
-    scroll-behavior: smooth;
-}
-
-        .container {
+            padding-top: 80px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            background-color: white;
+            height: 70px;
+        }
+
+        .logo-img {
+            width: 140px;
+            margin-left: 20px;
+        }
+
+        .navbar-nav a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #17395c;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav a:hover {
+            color: #0d6efd;
+        }
+
+        .main-content {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
             justify-content: space-between;
             align-items: center;
-            padding: 50px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+            text-align: left;
+            gap: 30px;
         }
 
         .left-section {
             flex: 1;
-            margin-right: 30px;
+        }
+
+        .left-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .left-section p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            font-size: 1rem;
+            margin-top: 10px;
         }
 
         .right-section {
             background: white;
-            padding: 20px 20px;
-            border-radius: 15px;
-            width: 45%;
-            height: 500px;
+            padding: 25px;
+            border-radius: 12px;
+            width: 40%;
+            min-width: 350px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
             align-items: center;
-            overflow-y: auto;
+            justify-content: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .right-section h2 {
             text-align: center;
             color: #17395c;
-            margin-bottom: 15px; /* Added slight space below heading */
+            margin-bottom: 15px;
+        }
+
+        .form-container {
+            width: 100%;
         }
 
         .form-control {
             border-radius: 20px;
-            padding: 8px;
-            font-size: 0.9rem;
+            padding: 10px;
+            font-size: 1rem;
         }
 
         .mb-3 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            width: 100%;
         }
 
-        .mb-3.d-flex {
-            display: flex;
-            gap: 10px;
+        .submit-btn {
+            width: 100%;
+            background-color: #17395c;
+            color: white;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            transition: background 0.3s ease;
         }
 
-        .stats-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            gap: 30px;
+        .submit-btn:hover {
+            background-color: #0d6efd;
         }
 
-        .stat-box {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            width: 150px;
-        }
-
-        .stat-box h3 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 767px) {
-            .container {
-                flex-direction: column;
-                padding: 20px;
-            }
-
-            .left-section,
-            .right-section {
-                width: 100%;
-                padding: 10px;
-            }
-
-            .right-section {
-                width: 100%;
-                min-height: auto;
-                overflow-y: auto;
-            }
-
-            .stats-container {
+        @media (max-width: 992px) {
+            .main-content {
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
             }
 
-            .stat-box {
-                width: 100%;
-                margin-bottom: 15px;
+            .right-section {
+                width: 90%;
+                min-width: auto;
             }
         }
-
-        .fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #ffffff;
-}
-
-.navbar {
-    height: 70px;
-    background-color: #ffffff;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo-img {
-    width: 10%;
-    height: 65px;
-    max-height: 70px;
-    transition: transform 0.3s ease-in-out;
-    margin-left: 13vh;
-}
-
-.navbar-border {
-    margin-right: 17vh;
-    border-radius: 50px;
-}
-
-.navbar-nav a {
-    font-size: 2.5vh;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #17395c;
-    transition: color 0.3s ease, transform 0.3s ease;
-    margin-right: 4vh;
-}
-
-.navbar-nav a:hover {
-    padding: 5px;
-    /* color: #662d91; */
-    transform: scale(1.1);
-    color: #17395c;
-    /* border: 1px solid #662d91;
-    border-radius: 5px; */
-}
-
-.navbar-toggler {
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-}
-
-.navbar-toggler-icon {
-    background-color: white;
-    width: 30px;
-    height: 3px;
-    display: block;
-    margin: 6px 0;
-}
-
-@media screen and (max-width: 992px) {
-    .logo-img {
-        width: 20%;
-        max-height: 60px;
-        margin-left: 5vh;
-    }
-
-    .navbar-border {
-        width: 100%;
-        text-align: center;
-        margin-left: 0;
-        border-radius: 20px;
-        padding: 5px 0;
-        justify-items: right;
-
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-        width: 18vh;
-        background-color: #17395c;
-
-    }
-
-    .navbar-nav .nav-item {
-        margin: 5px 0;
-        width: 100%;
-    }
-
-    .navbar-nav a {
-        color: white;
-        font-size: 18px;
-        margin: 5px 0;
-        display: block;
-        width: 100%;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .logo-img {
-        width: 25%;
-        max-height: 50px;
-        margin-left: 3vh;
-    }
-
-    .navbar-border {
-        padding: 8px 0;
-    }
-
-    .navbar-nav a {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .logo-img {
-        width: 30%;
-        max-height: 45px;
-        margin-left: 2vh;
-    }
-
-    .navbar-nav a {
-        font-size: 15px;
-    }
-}
     </style>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <div class="fixed-header">
         <header class="navbar navbar-expand-lg">
             <div class="container-fluid d-flex justify-content-between align-items-center">
-                <img src="logowhite.jpg" style="margin-top: 0%;" alt="Logo" class="logo-img">
+                <img src="logowhite.jpg" alt="Logo" class="logo-img">
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
                 <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <div class="navbar-border">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#aboutus">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#littlescholors">Little Scholars</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#achivement">Achievements</a></li>
-                            <li class="nav-item"><a class="nav-link" href="franchise.html">Franchise</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#founder">Founder</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
-                        </ul>
-                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
                 </nav>
             </div>
         </header>
     </div>
-    <div class="container" id="mainContent">
+
+    <div class="main-content">
         <div class="left-section">
-            <h1>Franchise Opportunity</h1>
-            <p>Start your own Kidzee preschool today! All you need is a 2000-3000* sq. feet space and an investment ₹15-16 lakhs*</p>
-            <div class="stats-container">
-                <div class="stat-box">
-                    <h3>2000+</h3>
-                    <p>Centers</p>
-                </div>
-                <div class="stat-box">
-                    <h3>750+</h3>
-                    <p>Cities</p>
-                </div>
-                <div class="stat-box">
-                    <h3>20+</h3>
-                    <p>Years of Legacy</p>
-                </div>
-                <div class="stat-box">
-                    <h3>20+</h3>
-                    <p>Million Students</p>
-                </div>
-            </div>
+            <h1>Give Your Child a Bright Start! ✨</h1>
+            <p>Welcome to our play school, where learning meets fun! Enroll your child in an interactive, safe, and joyful environment designed for early childhood development.</p>
+
+            <div class="info-box">Creative Learning – Art, music, and play-based activities.</div>
+            <div class="info-box">Structured Curriculum – Developing essential skills with care.</div>
+            <div class="info-box">Social & Emotional Growth – Making friends and learning together.</div>
+            <div class="info-box">Admissions Open Now! – Limited seats available.</div>
         </div>
+        
         <div class="right-section">
             <h2>Enquire Now</h2>
-            <form>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="First Name *" required>
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Last Name *" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Email *" required>
-                </div>
-                <div class="mb-3 d-flex">
-                    <input type="text" class="form-control me-2" placeholder="Phone Number *" required>
-                    <input type="text" class="form-control" placeholder="Pin Code *" required>
-                </div>
-                <div class="mb-3 d-flex">
-                    <input type="text" class="form-control me-2" placeholder="State/District *" required>
-                    <input type="text" class="form-control" placeholder="City *" required>
-                </div>
-                <div class="mb-3 d-flex">
-                    <input type="text" class="form-control me-2" placeholder="Country *" required>
-                    <input type="text" class="form-control" placeholder="Location *" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Join us</button>
-            </form>
+            <div class="form-container">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Full Name *" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email *" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Phone Number *" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="City *" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
-
-    <script>
-       document.addEventListener("DOMContentLoaded", function() {
-            const mainContent = document.getElementById("mainContent");
-
-            // Fade-in effect for the main content
-            setTimeout(() => {
-                mainContent.style.opacity = "1";
-                mainContent.style.transform = "translateY(0)";
-            }, 500);
-        });
-    </script>
 </body>
 </html>
