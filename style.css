@@ -334,6 +334,7 @@ html {
 @media (max-width: 1024px) {
     .LandingPage h3 {
         font-size: 50px;
+        width: 100%;
     }
     .container3 {
         grid-template-columns: repeat(2, 1fr);
@@ -348,11 +349,17 @@ html {
 /* Small Screens */
 @media (max-width: 768px) {
     .LandingPage h3 {
-        font-size: 40px;
+        font-size: 30px;
+        /* text-align: justify; */
+        
+    
     }
+   
+        
     .container3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+        
     }
     .card3 {
         width: 140px;
@@ -366,28 +373,52 @@ html {
 /* Extra Small Screens */
 @media (max-width: 480px) {
     .container3 {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers content horizontally */
+        justify-content: center; /* Centers content vertically */
+        width: 100%;
     }
+
     .card3 {
-        width: 90%;
-        margin: 0 auto;
+        width: 90%; /* Adjust width to fit screen */
+        max-width: 200px; /* Prevents oversized cards */
+        margin: 0 auto; /* Ensures horizontal centering */
     }
+
     .card3 img {
         width: 40px;
     }
+
     .card3 p {
         font-size: 12px;
+    }
+    .LandingPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .LandingPage h3 {
+        font-size: 28px;
+        text-align: center; /* Center text */
+        width: 100%;
+        margin: 0 auto; /* Ensures proper centering */
+        margin-bottom: 10px;
     }
 }
 .about-us h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     color:#17395c ;
+    text-align: justify;
 }  
 .about-us h2,.about-us p{
     color: #17395c;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
   /* About Us Section */
 .about-us {
@@ -396,12 +427,7 @@ html {
     padding: 30px 10%;
 }
 
-.philosophy-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
+
 
 /* Image Styling */
 .image-container {
@@ -413,6 +439,7 @@ html {
 
 .image-container img {
     width: 100%;
+    
     border-radius: 10px;
     object-fit: cover;
 }
@@ -435,7 +462,7 @@ html {
     font-size: 32px;
     color: #17395c; /* Dark Violet */
     font-weight: bold;
-    text-align: center;
+    text-align: justify;
 }
 
 .philosophy-content p {
@@ -536,12 +563,48 @@ html {
     width: 60%;
     font-size: 1.3rem;
 }
+/* Mobile Screens */
+@media (max-width: 768px) {
+    .advantage-container {
+        width: 90%; /* Increase width for smaller screens */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .row {
+        margin-left: 0 !important; /* Remove unnecessary left margin */
+    }
+
+    .advantage-item {
+        width: 90%; /* Increase width of items */
+        font-size: 1.1rem; /* Slightly adjust font size */
+        padding: 12px; /* Increase padding for better spacing */
+        margin: 10px auto; /* Center items */
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .advantage-container {
+        width: 90%; /* Take almost full width */
+        text-align: center;
+    }
+
+    .advantage-item {
+        width: 100%; /* Make each item full width */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        padding: 12px;
+    }
+}
+
 .Infrastructue h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #17395c;
-    text-align: center;
+    
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .Infrastructue p{
     padding-left: 10%;
@@ -566,7 +629,7 @@ html {
 }
 
 .play-school-content {
-    padding: 30px 10%;
+    padding: 1px 10%;
 }
 
 .play-school-content h1 {
@@ -719,18 +782,22 @@ button:hover {
 .left-content {
     flex: 1;
     min-width: 300px;
-    padding: 30px;
+    /* padding: 30px; */
 }
 
 .left-content h1 {
     font-size: 2rem;
     font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .left-content p {
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* padding-left: 5%;
+    padding-right: 5%; */
 }
 
 /* Right Tree Container */
@@ -813,7 +880,7 @@ button:hover {
 
 @media (max-width: 768px) {
     .container { flex-direction: column; text-align: center; }
-    .left-content { padding: 10px; }
+    .left-content { padding: 10%; }
     .tree-container { max-width: 500px; }
     .tree-container img { max-width: 550px; }
     .circle-item { width: 80px; height: 80px; }
@@ -821,16 +888,20 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    .tree-container { width: 600px; }
+    .tree-container {
+        width: 100%;
+        max-width: 600px; /* optional, to limit the maximum width */
+    }
+    .left-content { padding: 10%; }
     .circle-item { width: 60px; height: 60px; }
     .hover-content { padding: 20px; width: 45%; font-size: 0.8rem;top: 70%;}
     .tree-container img { max-width: 550px; }
-    .circle-item:nth-child(7) { top: 39%; left: 43%; }
-.circle-item:nth-child(2) { top: 15%; left: 41.4%; }
-.circle-item:nth-child(3) { top: 23.5%; left: 64%; }
-.circle-item:nth-child(4) { top: 44%; left: 67%; }
-.circle-item:nth-child(5) { top: 45%; left: 18%; }
-.circle-item:nth-child(6) { top: 21%; left: 21%; }
+    .circle-item:nth-child(7) { top: 35%; left: 50%; }
+    .circle-item:nth-child(2) { top: 10%; left: 40%; }
+    .circle-item:nth-child(3) { top: 20%; left: 60%; }
+    .circle-item:nth-child(4) { top: 40%; left: 65%; }
+    .circle-item:nth-child(5) { top: 50%; left: 20%; }
+    .circle-item:nth-child(6) { top: 15%; left: 25%; }
 }
 
 /* .circle-item:hover ~ .center-content {
@@ -964,11 +1035,12 @@ button:hover {
 
     .achive-content p {
         font-size: 2vh; /* Reduce font size */
-        padding: 0 10%;
+        /* padding: 0 10%; */
     }
 
     .carousel-container {
         width: 90%; /* Slightly wider on smaller screens */
+        
     }
 
     .carousel-image {
@@ -993,6 +1065,7 @@ button:hover {
 
     .carousel-container {
         width: 95%;
+        
     }
 
     .carousel-image {
@@ -1017,7 +1090,8 @@ button:hover {
     }
 
     .carousel-container {
-        width: 100%;
+        width: 85%;
+        
     }
 
     .carousel-image {
@@ -1172,10 +1246,10 @@ button:hover {
 /* Social Media Links */
 .social-links {
     margin-top: 10px;
-    margin-left: 33%;
+    /* margin-left: 33%; */
     margin-bottom: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     gap: 30px; /* Ensure spacing between icons */
 }
 
