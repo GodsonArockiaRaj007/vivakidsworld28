@@ -42,6 +42,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 .fixed-footer {
     position: fixed;
     bottom: 0;
@@ -189,6 +190,7 @@ html {
 
 .navbar-collapse {
     width: 100%;
+    
 }
 
 .navbar-toggler-icon {
@@ -209,11 +211,11 @@ html {
     .navbar-border {
         width: 100%;
         text-align: center;
-        margin-left: 0;
+        
         border-radius: 20px;
-        padding: 5px 0;
+        padding: 5px 23px;
         justify-items: right;
-
+        position: fixed;
     }
 
     .navbar-nav {
@@ -247,7 +249,9 @@ html {
     }
 
     .navbar-border {
-        padding: 8px 0;
+        padding: 8px 23px;
+        position: fixed;
+        margin-right: 5vh;
     }
 
     .navbar-nav a {
