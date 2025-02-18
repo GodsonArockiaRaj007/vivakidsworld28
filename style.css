@@ -353,7 +353,7 @@ html {
     opacity: 0;
     transform: translateX(-20px);
     animation: fadeInButton 0.8s forwards;
-    animation-delay: 1.7s; /* Delayed for each button */
+    animation-delay: 1s; /* Delayed for each button */
 }
 
 .btn:nth-child(1) { animation-delay: 1.7s; }
@@ -364,7 +364,7 @@ html {
     opacity: 0;
     transform: translateX(20px);
     animation: fadeInFooterLogo 1s forwards;
-    animation-delay: 2s;
+    animation-delay: 0.5s;
 }
 
 /* Keyframes for animations */
@@ -512,7 +512,7 @@ html {
     
     opacity: 0;
     animation: fadeInContainer 1s forwards;
-    animation-delay: 1s;
+    animation-delay: 0.4s;
 }
 
 /* Individual Boxes */
@@ -951,6 +951,45 @@ html {
     }
     .advantage-item {
         width: 100%;
+        font-size: 1.8vh;
+        padding: 12px;
+    }
+}
+/* Initial state of the items - hide and position off-screen to the left */
+.advantage-item {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left side */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    background-color: #17395c;
+    color: white;
+    border: solid 2px #17395c;
+    border-radius: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    width: 1000%; /* Increase width */
+    max-width: 300px;
+}
+
+/* When the item comes into view, animate it */
+.advantage-item.visible {
+    opacity: 1;
+    transform: translateX(0); /* Move to its original position */
+}
+
+/* Adjust the positioning and size of items for mobile and smaller screens */
+@media (max-width: 768px) {
+    .advantage-item {
+        font-size: 1.8vh;
+        padding: 12px;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .advantage-item {
         font-size: 1.8vh;
         padding: 12px;
     }
