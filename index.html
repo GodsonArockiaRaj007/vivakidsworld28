@@ -199,6 +199,48 @@
         </div>
 
     </div>
+    <script>
+        // Function to check if an element is in view
+function isElementInView(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
+
+// Function to add 'visible' class when elements are in view
+function checkScroll() {
+    const h1Tags = document.querySelectorAll('h1'); // Select all <h1> tags
+    const rows = document.querySelectorAll('.about-us .row');
+    const images = document.querySelectorAll('.about-us .image-container1, .about-us .image-container2');
+    
+    // Check if each <h1> is in view and add 'visible' class
+    h1Tags.forEach(h1 => {
+        if (isElementInView(h1)) {
+            h1.classList.add('visible');
+        }
+    });
+
+    // Check if each row is in view and add 'visible' class
+    rows.forEach(row => {
+        if (isElementInView(row)) {
+            row.classList.add('visible');
+        }
+    });
+    
+    // Check if each image container is in view and add 'visible' class
+    images.forEach(image => {
+        if (isElementInView(image)) {
+            image.classList.add('visible');
+        }
+    });
+}
+
+// Run the check on scroll
+window.addEventListener('scroll', checkScroll);
+
+// Initial check on page load to handle elements already in view
+window.addEventListener('load', checkScroll);
+
+    </script>
 
     <div class="advantage-container mt-4">
         <h1>Our Unique Edge</h1>
