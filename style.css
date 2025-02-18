@@ -434,14 +434,28 @@ html {
 
 
 /* Image Styling */
-.image-container {
+.image-container1 {
     /* margin-left: 15%; */
     position: relative;
     width: 100%;
     max-width: 450px;
 }
 
-.image-container img {
+.image-container1 img {
+    width: 100%;
+    
+    border-radius: 10px;
+    object-fit: cover;
+}
+.image-container2 {
+    /* margin-left: 15%; */
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin-right: 23%;
+}
+
+.image-container2 img {
     width: 100%;
     
     border-radius: 10px;
@@ -594,7 +608,7 @@ html {
     }
 
     .advantage-item {
-        width: 100%; /* Make each item full width */
+        width: 80%; /* Make each item full width */
         font-size: 1rem; /* Adjust font size for smaller screens */
         padding: 12px;
     }
@@ -777,15 +791,17 @@ button:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px 20px;
+    width: 100%;
+    
+    /* padding: 30px 10px; */
 }
 
 /* Left Content */
 .left-content {
     flex: 1;
+    width: 50%;
     min-width: 300px;
+    margin-left: 5%;
     /* padding: 30px; */
 }
 
@@ -807,16 +823,17 @@ button:hover {
 /* Right Tree Container */
 .right-content {
     flex: 1;
-    min-width: 400px;
+    width: 50%;
     text-align: center;
     position: relative;
 }
 
 .tree-container {
+    margin-left: 10%;
     position: relative;
     width: 100%;
     max-width: 70   0px;
-    margin: auto;
+   
 }
 
 .tree-image {
@@ -884,7 +901,7 @@ button:hover {
 
 @media (max-width: 768px) {
     .container { flex-direction: column; text-align: center; }
-    .left-content { padding: 10%; }
+   
     .tree-container { max-width: 500px; }
     .tree-container img { max-width: 550px; }
     .circle-item { width: 80px; height: 80px; }
@@ -896,10 +913,10 @@ button:hover {
         width: 100%;
         max-width: 600px; /* optional, to limit the maximum width */
     }
-    .left-content { padding: 10%; }
+  
     .circle-item { width: 60px; height: 60px; }
     .hover-content { padding: 20px; width: 45%; font-size: 0.8rem;top: 70%;}
-    .tree-container img { max-width: 550px; }
+    .tree-container img { max-width: 600px; }
     .circle-item:nth-child(7) { top: 35%; left: 50%; }
     .circle-item:nth-child(2) { top: 10%; left: 40%; }
     .circle-item:nth-child(3) { top: 20%; left: 60%; }
@@ -981,6 +998,8 @@ button:hover {
     font-size: 2.5vh;
     line-height: 1.8;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 3.2%;
+    padding-right: 3.2%;
     
 }
 
@@ -995,7 +1014,7 @@ button:hover {
 
 /* Carousel Container */
 .carousel-container {
-    width: 80%;
+    width: 82%;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
