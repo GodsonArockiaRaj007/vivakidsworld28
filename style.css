@@ -97,7 +97,7 @@ html {
     color: #17395c;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 1.3vh; /* Adjusted font size */
+    font-size: 1.8vh; /* Adjusted font size */
     margin: 0;
 }
 
@@ -150,7 +150,7 @@ html {
     width: 10%;
     height: 65px;
     max-height: 70px;
-    transition: transform 0.3s ease-in-out;
+    
     margin-left: 13vh;
 }
 
@@ -220,7 +220,9 @@ html {
         justify-items: right;
         position: fixed;
     }
-
+    .btn p{
+        font-size: 1.3vh;
+    }
     .navbar-nav {
         flex-direction: column;
         align-items: center;
@@ -309,12 +311,12 @@ html {
 .navbar-nav a:nth-child(7) { animation-delay: 1.1s; }
 
 /* Animation for the logo in navbar */
-.logo-img {
+/* .logo-img {
     opacity: 0;
     transform: scale(0.9);
     animation: fadeInLogo 1s forwards;
     animation-delay: 0.3s;
-}
+} */
 
 /* Animation for the footer */
 .fixed-footer {
@@ -409,25 +411,24 @@ html {
     }
 }
 /* General Styles */
-.LandingPage {
-    width: 95%;
-    height: auto;
-    position: relative;
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    
-    text-align: center;
+.landing-container{
+    background-image: url('backcloud1.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the image in place */
+    width: 100%;
+    height: 100dvh; /* Uses dynamic viewport height */
+    overflow-y: auto; /* Prevents content overflow */
+   
 }
+
 /* General Styling */
 
 
 
 
-/* Box Container */
-.container3 {
-    
-}
+
 
 /* Individual Boxes */
 .card3 {
@@ -444,11 +445,11 @@ html {
 
 /* General Styles */
 .LandingPage {
-    width: 60%;
+    /* width: 60%; */
     text-align: left;
     padding-left: 7%;
    
-    background-color: white; /* Light background like the image */
+   /* Light background like the image */
     height: auto;
     position: relative;
     background-size: cover;
@@ -458,6 +459,8 @@ html {
     opacity: 0;
     animation: fadeInLandingPage 1s forwards;
     animation-delay: 0.2s;
+     width: 100vh;
+    height: 100vh;
     
 }
 
@@ -484,8 +487,8 @@ html {
     gap: 10px;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    padding-left: 20%;
+    width: 80%;
+   
     
     
    
@@ -674,14 +677,31 @@ html {
 }
   /* About Us Section */
 .about-us {
-    margin-top: 50px;
+    
+   
      color: #17395c;
     width: 100%;
+    
+}
+
+.about-bg{
+    background-image: url('backcloud2.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the image in place */
     padding-left: 7%;
     padding-right: 7%;
 }
-
-
+.philosophy-bg{
+    background-image: url('backcloud3.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the image in place */
+    padding-left: 7%;
+    padding-right: 7%;
+}
 
 /* Image Styling */
 .image-container1 {
@@ -876,8 +896,6 @@ html {
 }
 
 .advantage-container{
-    margin-top: 5%;
-    margin-bottom: 3%;
     padding-left: 7%;
     padding-right: 7%;
 } 
@@ -978,7 +996,15 @@ html {
         padding: 12px;
     }
 }
-
+.advantage-infra-bg{
+    background-image: url('backcloud1.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the image in place */
+   height: 77dvh;
+   overflow-y: auto;
+}
 .Infrastructue h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #17395c;
@@ -1005,13 +1031,21 @@ html {
 }
 .program-container{
     width: 100%;
-    height:140vh; 
+    height:100vh; 
     position: relative;
     padding-left: 7%;
     padding-right: 7%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+.pg-bg{
+    background-image: url('backcloud2.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the image in place */
+    height: 110dvh; /* Uses dynamic viewport height */
+    overflow-y: auto; /* Prevents content overflow */
+}
 
 
 .play-school-content h1 {
@@ -1166,50 +1200,74 @@ button:hover {
 /* General Container */
 .container7 {
     display: flex;
-    flex-wrap: wrap;
-    padding-left: 2%;
-    margin-top: 3%;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
     width: 100%;
+}
+
+.con-bg {
+    background-image: url('backcloud3.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Changed to min-height to avoid hidden content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Left Content */
 .left-content {
-    flex: 1;
-    width: 50%;
-    min-width: 300px;
-    margin-left: 5%;
-    
+    text-align: justify;
+    width: 100%;
 }
 
-.left-content p{
+.left-content h1 {
+    color: #17395c;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.left-content p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5vh;
+    color: #17395c;
+    text-align: justify;
 }
 
-/* Right Tree Container */
+/* Right Content */
 .right-content {
-    flex: 1;
     text-align: center;
-    position: relative;
-}
-
-/* Tree Image */
-.tree-container {
     position: relative;
     width: 100%;
     max-width: 700px;
 }
 
-.tree-image {
+/* Tree Container */
+.tree-container {
+    position: relative;
     width: 100%;
+    max-width: 700px; /* Ensures image scales properly */
+}
+
+/* Tree Image */
+.tree-image {
+    width: 100%;  /* Makes it responsive */
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Circle Items */
 .circle-item {
     position: absolute;
-    width: 90px;
-    height: 90px;
+    width: 15vw;  /* Relative width to make it scalable */
+    max-width: 90px;
+    height: 15vw;
+    max-height: 90px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -1220,123 +1278,86 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
+/* Position Circles on Tree (Using relative positioning) */
+.circle-item:nth-child(7) { top: 36%; left: 55%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(2) { top: 76.5%; left: 63%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(3) { top: 50%; left: 78%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(4) { top: 65%; left: 50%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(5) { top: 57%; left: 34%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(6) { top: 20.5%; left: 73.5%; transform: translate(-50%, -50%); }
+
+/* Default style for all icons */
 .circle-item img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
+    object-fit: contain;
+    width: 60%;
+    height: 60%;
 }
 
-.circle-item p {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #17395c;
-    margin-top: 5px;
-}
-
-/* Position Circles on Tree */
-.circle-item:nth-child(7) { top: 39%; left: 40.5%; }
-.circle-item:nth-child(2) { top: 13%; left: 41.4%; }
-.circle-item:nth-child(3) { top: 23.5%; left: 64%; }
-.circle-item:nth-child(4) { top: 44%; left: 65%; }
-.circle-item:nth-child(5) { top: 43%; left: 16%; }
-.circle-item:nth-child(6) { top: 21%; left: 19%; }
-
-/* Hover Content in Pot */
+/* Hover Content Below Image */
 .hover-content {
-    position: absolute;
-    bottom: 12%;
-    left: 52%;
-    transform: translateX(-50%);
-    width: 50%;
-    max-width: 200px;
-    height: 100px;
+    width: 100%;
+    max-width: 550px;
     color: #17395c;
     padding: 15px;
+    border: 3px solid black;
     border-radius: 10px;
     font-size: 1rem;
-    text-align: justify;
-    display: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
     font-weight: bold;
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .container7 {
-        flex-direction: column;
-        text-align: center;
-        padding-left: 7%;
-        padding-right: 7%;
+        padding: 5%;
     }
-    
+
     .left-content {
         width: 100%;
-        margin-left: 0;
-        
     }
-    .left-content p{
+    
+    .left-content p {
         font-size: 2vh;
     }
 
-    .right-content {
-        width: 100%;
-    }
-
     .tree-container {
-        max-width: 500px;
-        margin: 0 auto; /* Centers the tree container */
-    }
-
-    .tree-container img {
-        max-width: 550px;
+        max-width: 100%;
     }
 
     .circle-item {
-        width: 80px;
-        height: 80px;
+        width: 12vw;
+        max-width: 70px;
+        height: 12vw;
+        max-height: 70px;
     }
 
     .hover-content {
-        width: 70%;
+        width: 90%;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    .container7 {
-        flex-direction: column;
-        text-align: center;
-        
-    }
-
     .tree-container {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
+        max-width: 100%;
     }
 
     .circle-item {
-        width: 60px;
-        height: 60px;
+        width: 10vw;
+        max-width: 60px;
+        height: 10vw;
+        max-height: 60px;
     }
 
     .hover-content {
-        padding: 20px;
-        width: 45%;
         font-size: 0.8rem;
-        top: 70%;
     }
-
-    .tree-container img {
-        max-width: 600px;
-    }
-
-    /* Adjust circle positions */
-    .circle-item:nth-child(7) { top: 35%; left: 50%; }
-    .circle-item:nth-child(2) { top: 10%; left: 40%; }
-    .circle-item:nth-child(3) { top: 20%; left: 60%; }
-    .circle-item:nth-child(4) { top: 40%; left: 65%; }
-    .circle-item:nth-child(5) { top: 50%; left: 20%; }
-    .circle-item:nth-child(6) { top: 15%; left: 25%; }
 }
-
 
 .achive-heading h6, 
 .achive-heading h1 {
@@ -1356,7 +1377,18 @@ button:hover {
     overflow: hidden;
     padding-left: 6%;
     padding-right: 6%;
+    margin-top: 10vh;
     
+    
+}
+.achive-bg{
+    background-image: url('backcloud1.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the image in place */
+    width: 100vh;
+    height: 100vh;
 }
 
 /* Content Styling */
@@ -1523,15 +1555,27 @@ button:hover {
     transform: scale(1.05);
 } */
 
-
+.founder-bg{
+    background-image: url('backcloud4.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+  
+   width: 100%;
+   
+}
 .founder-container {
     /* margin-top: 5%; */
     width: 100%;
-    
+padding-top: 5%;
     /* padding: 3% 0; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+    width: 100vh;
+    height: 100dvh; /* Uses dynamic viewport height */
+    overflow-y: auto; /* Prevents content overflow */
 }
 
 .founder-img img {
@@ -1586,10 +1630,10 @@ button:hover {
 
 /* Contact Box */
 .contact-container {
-    background: #173a5cef;
-    /* padding: 10px; */
+    background: #173a5c;
+   
     max-width: 100%;
-    margin: auto;
+   
    
     text-align: center;
 }
