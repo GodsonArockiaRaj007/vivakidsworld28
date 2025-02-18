@@ -34,7 +34,7 @@ body {
     margin: 0;
     
     padding-top: 80px;
-    padding-bottom: 70px;
+    padding-bottom: 37px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on mobile */
 }
@@ -74,7 +74,7 @@ html {
     color: rgb(0, 0, 0);
     font-weight: bold;
     padding: 0 15px;
-    min-width: 180px;
+    min-width: 170px;
     justify-content: center;
     gap: 6px;
     cursor: pointer; /* Ensures clickable behavior */
@@ -97,7 +97,7 @@ html {
     color: #17395c;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 14px; /* Adjusted font size */
+    font-size: 1.3vh; /* Adjusted font size */
     margin: 0;
 }
 
@@ -413,7 +413,7 @@ html {
         justify-content: center; /* Centers content vertically */
         width: 100%; /* Expands width */
         max-width: 320px; /* Prevents stretching */
-        margin-left: 5%; /* Center container itself */
+         /* Center container itself */
     }
 
     .card3 {
@@ -483,9 +483,10 @@ html {
 .image-container2 {
     /* margin-left: 15%; */
     position: relative;
-    width: 100%;
+    width: 85%;
     max-width: 450px;
-    margin-right: 30%;
+    
+   
 }
 
 .image-container2 img {
@@ -505,13 +506,15 @@ html {
 .subtitle {
     font-style: italic;
     font-size: 2.8vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #17395c;
     border-left: 3px solid #4873b4;
-    padding-left: 10px;
+    
 }
 
 .philosophy-content h1 {
     font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #17395c; /* Dark Violet */
     font-weight: bold;
     text-align: justify;
@@ -524,22 +527,18 @@ html {
     line-height: 1.8;
 }
 
-/* Read more link */
-.read-more {
-    color: #007bff;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
 
 /* Mobile Responsiveness */
 @media (max-width: 992px) {
     .philosophy-section {
         flex-direction: column;
         text-align: justify;
+        
+    }
+    .philosophy-content p{
+        margin: 0; /* Resets all margins */
+        padding: 0;
+        width: 100%;
     }
 
     .image-container1 {
@@ -575,6 +574,13 @@ html {
     }
     .philosophy-content p{
         font-size: 2vh;
+    }
+}
+@media (max-width: 480px) {
+    .philosophy-content {
+        margin: 0; /* Resets all margins */
+        padding: 0;
+        width: 100%;
     }
 }
 @media (min-width: 992px) {
@@ -623,6 +629,7 @@ html {
         display: block; /* Removes extra spacing from inline elements */
         margin: 0;
 }
+
 }
 .advantage-container{
     margin-top: 5%;
@@ -1091,7 +1098,7 @@ button:hover {
 
 /* Carousel Container */
 .carousel-container {
-    width:88%;
+    width:100%;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
@@ -1139,7 +1146,7 @@ button:hover {
     }
 
     .carousel-container {
-        width: 90%; /* Slightly wider on smaller screens */
+        width: 100%; /* Slightly wider on smaller screens */
         
     }
 
@@ -1164,7 +1171,7 @@ button:hover {
     }
 
     .carousel-container {
-        width: 95%;
+        width: 100%;
         
     }
 
@@ -1186,11 +1193,11 @@ button:hover {
 
     .achive-content p {
         font-size: 2vh;
-        padding: 0 5%;
+       
     }
 
     .carousel-container {
-        width: 85%;
+        width: 100%;
         
     }
 
@@ -1296,11 +1303,11 @@ button:hover {
 
 /* Contact Box */
 .contact-container {
-    background: white;
-    padding: 25px;
-    max-width: 50%;
+    background: #173a5cef;
+    /* padding: 10px; */
+    max-width: 100%;
     margin: auto;
-    border-radius: 12px;
+   
     text-align: center;
 }
 
@@ -1316,12 +1323,19 @@ button:hover {
 .contact-info p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
-    color: #17395c;
+    color: #ffffff;
     display: flex;
     align-items: center;
     gap: 12px;
     width: 100%;
     max-width: 400px;
+}
+.contact-infocopy {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: right;
+    bottom: 5;
 }
 
 .contact-info i {
@@ -1330,6 +1344,7 @@ button:hover {
     min-width: 25px;
     text-align: center;
 }
+
 
 /* Align links properly */
 .contact-info a {
