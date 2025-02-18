@@ -17,7 +17,7 @@ html, body {
   * {
     box-sizing: border-box;
   }
-  
+ 
 :root {
     --primary-color: #6AABD2;  /* Soft Blue */
     --secondary-color: #F5E8C7; /* Warm Beige */
@@ -33,7 +33,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     
-    padding-top: 65px;
+    padding-top: 80px;
     padding-bottom: 70px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on mobile */
@@ -181,11 +181,14 @@ html {
 }
 
 .navbar-toggler {
+    
     border: none;
     background-color: transparent;
     position: absolute;
-    right: 20px;
+    right: 5px;
     top: 15px;
+    width: 53px;
+    
 }
 
 .navbar-collapse {
@@ -203,7 +206,7 @@ html {
 
 @media screen and (max-width: 992px) {
     .logo-img {
-        width: 20%;
+        width: 35%;
         max-height: 60px;
         margin-left: 5vh;
     }
@@ -244,14 +247,14 @@ html {
 @media screen and (max-width: 768px) {
     .logo-img {
         width: 25%;
-        max-height: 50px;
+        max-height: 60px;
         margin-left: 3vh;
     }
 
     .navbar-border {
         padding: 8px 23px;
         position: fixed;
-        margin-right: 5vh;
+       
     }
 
     .navbar-nav a {
@@ -262,14 +265,39 @@ html {
 @media screen and (max-width: 576px) {
     .logo-img {
         width: 30%;
-        max-height: 45px;
+        max-height: 65px;
         margin-left: 2vh;
     }
 
     .navbar-nav a {
         font-size: 15px;
     }
-}/* General Styles */
+}
+/* Default navbar-toggler-icon styling */
+.navbar-toggler-icon {
+    width: 25px;  /* Adjust width */
+    height: 2px;  /* Adjust thickness */
+    display: block;
+     /* Icon color */
+    border-radius: 2px;
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .navbar-toggler-icon {
+        width: 20px;  /* Smaller width for small screens */
+        height: 2px;  /* Adjust thickness */
+    }
+}
+
+/* For extra small screens */
+@media screen and (max-width: 576px) {
+    .navbar-toggler-icon {
+        width: 18px;  /* Even smaller toggle icon */
+        height: 1.5px;
+    }
+}
+/* General Styles */
 .LandingPage {
     width: 95%;
     height: auto;
@@ -277,14 +305,15 @@ html {
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
-    padding: 30px 10%;
+    
     text-align: center;
 }
 /* General Styling */
 .LandingPage {
     width: 60%;
     text-align: left;
-    padding: 50px 0;
+    padding-left: 7%;
+   
     background-color: white; /* Light background like the image */
 }
 
@@ -295,7 +324,9 @@ html {
     font-weight: bolder;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 30px;
-    margin-left: 19%;
+    
+
+   
 }
 
 /* Box Container */
@@ -306,7 +337,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 50%;
-    margin: 0 auto;
+    padding-left: 20%;
 }
 
 /* Individual Boxes */
@@ -374,45 +405,45 @@ html {
     }
 }
 
-/* Extra Small Screens */
 @media (max-width: 480px) {
     .container3 {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers content horizontally */
+        align-items: center; /* Ensures horizontal centering */
         justify-content: center; /* Centers content vertically */
-        width: 100%;
+        width: 100%; /* Expands width */
+        max-width: 320px; /* Prevents stretching */
+        margin-left: 5%; /* Center container itself */
     }
 
     .card3 {
-        width: 90%; /* Adjust width to fit screen */
-        max-width: 200px; /* Prevents oversized cards */
-        margin: 0 auto; /* Ensures horizontal centering */
+        width: 100%; /* Makes cards take full width */
+        max-width: 280px; /* Controls card size */
+        text-align: center;
     }
 
     .card3 img {
-        width: 40px;
+        width: 50px; /* Slightly larger icons */
     }
 
     .card3 p {
-        font-size: 12px;
+        font-size: 14px;
     }
+
     .LandingPage {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         width: 100%;
+        padding: 0%;
+        text-align: center; /* Center heading text */
     }
+
     .LandingPage h3 {
-        font-size: 28px;
-        text-align: center; /* Center text */
+        font-size: 26px;
         width: 100%;
-        margin: 0 auto; /* Ensures proper centering */
-        margin-bottom: 10px;
+        margin: 10px auto;
     }
 }
+
+
 .about-us h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -428,7 +459,8 @@ html {
 .about-us {
      color: #17395c;
     width: 100%;
-    padding: 30px 10%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 
@@ -439,6 +471,7 @@ html {
     position: relative;
     width: 100%;
     max-width: 450px;
+    margin-left: 15%;
 }
 
 .image-container1 img {
@@ -452,7 +485,7 @@ html {
     position: relative;
     width: 100%;
     max-width: 450px;
-    margin-right: 23%;
+    margin-right: 30%;
 }
 
 .image-container2 img {
@@ -466,11 +499,12 @@ html {
 .philosophy-content {
     flex: 1;
     text-align: justify;
+    
 }
 
 .subtitle {
     font-style: italic;
-    font-size: 18px;
+    font-size: 2.8vh;
     color: #17395c;
     border-left: 3px solid #4873b4;
     padding-left: 10px;
@@ -508,7 +542,7 @@ html {
         text-align: justify;
     }
 
-    .image-container {
+    .image-container1 {
         max-width: 300px;
         display: flex;
         justify-content: center; /* Centers the image horizontally */
@@ -516,7 +550,20 @@ html {
         margin: 0 auto; /* Ensures the container itself is centered */
     }
 
-    .image-container img {
+    .image-container1 img {
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove any extra spacing */
+    }
+    .image-container2 {
+        max-width: 300px;
+        display: flex;
+        justify-content: center; /* Centers the image horizontally */
+        align-items: center; /* Centers the image vertically if needed */
+        margin: 0 auto; /* Ensures the container itself is centered */
+    }
+
+    .image-container2 img {
         max-width: 100%;
         height: auto; /* Maintain aspect ratio */
         display: block; /* Remove any extra spacing */
@@ -524,6 +571,10 @@ html {
 
     .philosophy-content {
         text-align: justify;
+
+    }
+    .philosophy-content p{
+        font-size: 2vh;
     }
 }
 @media (min-width: 992px) {
@@ -541,7 +592,23 @@ html {
     }
 
     /* Ensure image container has no extra margins */
-    .image-container {
+    .image-container1 {
+        margin: 0; /* Resets all margins */
+        padding: 0; /* Resets all paddings */
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-end; /* Moves image inside container to the right */
+        margin-right: 5%;
+    }
+
+    /* Ensure the image itself aligns properly */
+    .image-container1 img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Removes extra spacing from inline elements */
+        margin: 0; /* Ensures no unwanted margins */
+    }
+    .image-container2 {
         margin: 0; /* Resets all margins */
         padding: 0; /* Resets all paddings */
         max-width: 100%;
@@ -550,22 +617,25 @@ html {
     }
 
     /* Ensure the image itself aligns properly */
-    .image-container img {
+    .image-container2 img {
         max-width: 100%;
         height: auto;
         display: block; /* Removes extra spacing from inline elements */
-        margin: 0; /* Ensures no unwanted margins */
-    }
+        margin: 0;
+}
 }
 .advantage-container{
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
 } 
 .advantage-container h1 {
     text-align: center;
     font-weight: bold;
     color: #17395c;
     margin-bottom: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
    
 }
 
@@ -578,13 +648,17 @@ html {
     text-align: center;
     padding: 10px;
     margin-bottom: 20px;
-    width: 60%;
-    font-size: 1.3rem;
+    
+    font-size: 1rem;
+    width: 1000%; /* Increase width */
+    max-width: 300px; /* Optional: Limit maximum width */
+    
 }
+
 /* Mobile Screens */
 @media (max-width: 768px) {
     .advantage-container {
-        width: 90%; /* Increase width for smaller screens */
+        width: 100%; /* Increase width for smaller screens */
         margin: 0 auto; /* Center the container */
     }
 
@@ -593,23 +667,24 @@ html {
     }
 
     .advantage-item {
-        width: 90%; /* Increase width of items */
-        font-size: 1.1rem; /* Slightly adjust font size */
-        padding: 12px; /* Increase padding for better spacing */
-        margin: 10px auto; /* Center items */
+        width: 100%; 
+        font-size: 1.8vh; 
+        padding: 12px; 
+        margin: 10px auto;
     }
+
 }
+
 
 /* Extra Small Screens */
 @media (max-width: 480px) {
     .advantage-container {
-        width: 90%; /* Take almost full width */
+        width: 100%; /* Take almost full width */
         text-align: center;
     }
-
     .advantage-item {
-        width: 80%; /* Make each item full width */
-        font-size: 1rem; /* Adjust font size for smaller screens */
+        width: 100%;
+        font-size: 1.8vh;
         padding: 12px;
     }
 }
@@ -621,34 +696,33 @@ html {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: justify;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 .Infrastructue p{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 7%;
+    padding-right: 7%;
     text-align: justify;
     color: #17395c;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5vh;
     line-height: 1.8;
 }
-
+@media (max-width: 768px) {
+    .Infrastructue p{
+    font-size: 2vh;    
+    }
+}
 .program-container{
     width: 100%;
     height:140vh; 
     position: relative;
-    /* padding: 5% 0; */
-    /* background-image: url(pink1.png); */
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    padding-left: 7%;
+    padding-right: 7%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.play-school-content {
-    padding: 1px 10%;
-}
+
 
 .play-school-content h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -661,24 +735,14 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 40px; /* Adds spacing between columns */
+    gap: 30px; /* Adds spacing between columns */
 }
 
 .left-column, .right-column {
     width: 50%; /* Makes each column take half the width */
 }
 
-/* Responsive Design for Mobile Screens */
-@media (max-width: 768px) {
-    .content-container {
-        flex-direction: column; /* Stack paragraphs vertically */
-        align-items: center; /* Center align content */
-    }
 
-    .left-column, .right-column {
-        width: 100%; /* Take full width on small screens */
-    }
-}
 
 .play-school-content p {
     
@@ -701,7 +765,28 @@ html {
     background-repeat: no-repeat;
     
 }
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack paragraphs vertically */
+        align-items: center; /* Center align content */
+    }
 
+    .left-column, .right-column {
+        width: 100%; /* Take full width on small screens */
+    }
+    .play-school-content h2{
+        text-align: justify !important;
+    }
+}
+@media (max-width: 480px) {
+    .content-container p {
+        font-size: 2vh;
+    }
+    .play-school-content h2{
+        text-align: justify;
+    } 
+}
 
 .program-container1 {
     width: 100%;
@@ -710,7 +795,7 @@ html {
     /* padding: 5% 0; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     
-    padding: 30px 10%;
+   
     
 }
 
@@ -745,7 +830,10 @@ html {
     background-size: cover;
     background-position: center;
 }
-
+.flip-box-back p{
+    padding-top: 5%;
+    font-size: large;
+}
 .flip-box-back {
     background-color: white;
     color: #17395c;
@@ -754,7 +842,7 @@ html {
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 30px;
+    padding: 40px;
     transform: rotateY(180deg);
     font-size: 1.5rem;
 }
@@ -786,14 +874,12 @@ button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 /* General Container */
-.container {
+.container7 {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    padding-left: 2%;
+    margin-top: 3%;
     width: 100%;
-    
-    /* padding: 30px 10px; */
 }
 
 /* Left Content */
@@ -802,38 +888,26 @@ button:hover {
     width: 50%;
     min-width: 300px;
     margin-left: 5%;
-    /* padding: 30px; */
+    
 }
 
-.left-content h1 {
-    font-size: 2rem;
-    font-weight: bold;
+.left-content p{
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.left-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: justify;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* padding-left: 5%;
-    padding-right: 5%; */
+    font-size: 2.5vh;
 }
 
 /* Right Tree Container */
 .right-content {
     flex: 1;
-    width: 50%;
     text-align: center;
     position: relative;
 }
 
+/* Tree Image */
 .tree-container {
-    margin-left: 10%;
     position: relative;
     width: 100%;
-    max-width: 70   0px;
-   
+    max-width: 700px;
 }
 
 .tree-image {
@@ -852,16 +926,13 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* background: white; */
     border-radius: 50%;
-    /* border: 3px solid #17395c; */
     transition: transform 0.3s ease;
 }
 
 .circle-item img {
     width: 50%;
     height: 50%;
-    
     object-fit: cover;
 }
 
@@ -889,7 +960,6 @@ button:hover {
     width: 50%;
     max-width: 200px;
     height: 100px;
-    /* background: rgba(214, 110, 50, 0.9); */
     color: #17395c;
     padding: 15px;
     border-radius: 10px;
@@ -900,23 +970,75 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .container { flex-direction: column; text-align: center; }
-   
-    .tree-container { max-width: 500px; }
-    .tree-container img { max-width: 550px; }
-    .circle-item { width: 80px; height: 80px; }
-    .hover-content { width: 70%; }
+    .container7 {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    
+    .left-content {
+        width: 100%;
+        margin-left: 0;
+        
+    }
+    .left-content p{
+        font-size: 2vh;
+    }
+
+    .right-content {
+        width: 100%;
+    }
+
+    .tree-container {
+        max-width: 500px;
+        margin: 0 auto; /* Centers the tree container */
+    }
+
+    .tree-container img {
+        max-width: 550px;
+    }
+
+    .circle-item {
+        width: 80px;
+        height: 80px;
+    }
+
+    .hover-content {
+        width: 70%;
+    }
 }
 
 @media (max-width: 480px) {
+    .container7 {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
     .tree-container {
         width: 100%;
-        max-width: 600px; /* optional, to limit the maximum width */
+        max-width: 600px;
+        margin: 0 auto;
     }
-  
-    .circle-item { width: 60px; height: 60px; }
-    .hover-content { padding: 20px; width: 45%; font-size: 0.8rem;top: 70%;}
-    .tree-container img { max-width: 600px; }
+
+    .circle-item {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hover-content {
+        padding: 20px;
+        width: 45%;
+        font-size: 0.8rem;
+        top: 70%;
+    }
+
+    .tree-container img {
+        max-width: 600px;
+    }
+
+    /* Adjust circle positions */
     .circle-item:nth-child(7) { top: 35%; left: 50%; }
     .circle-item:nth-child(2) { top: 10%; left: 40%; }
     .circle-item:nth-child(3) { top: 20%; left: 60%; }
@@ -925,52 +1047,7 @@ button:hover {
     .circle-item:nth-child(6) { top: 15%; left: 25%; }
 }
 
-/* .circle-item:hover ~ .center-content {
-    display: block;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-} */
 
-/* Responsive adjustments for center content */
-/* @media (max-width: 768px) {
-   
-} */
-
-/* On smaller screens */
-/* @media (max-width: 480px) {
-    .circle-item:hover ~ .center-content {
-        display: block;
-    }
-} */
-  /* }
-
-/* .about-container {
-    position: relative; 
-    width: 90%; 
-    max-width: 600px; 
-    height: 300px; 
-    margin: 0 auto; 
-    background: url('Screenshot\ 2025-02-05\ 122453.png') center/cover no-repeat; 
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-.image-text {
-    position: relative; 
-    color: #800080; 
-    font-weight: bold;
-    padding: 10px 20px; 
-    border-radius: 8px; 
-    max-width: 90%; 
-    word-wrap: break-word;
-    margin-right: 20px;
-    margin-bottom:25px;
-
-} *//* General Styles */
 .achive-heading h6, 
 .achive-heading h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -987,6 +1064,8 @@ button:hover {
     background-repeat: no-repeat;
     align-items: center;
     overflow: hidden;
+    padding-left: 6%;
+    padding-right: 6%;
     
 }
 
@@ -998,8 +1077,6 @@ button:hover {
     font-size: 2.5vh;
     line-height: 1.8;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-left: 3.2%;
-    padding-right: 3.2%;
     
 }
 
@@ -1014,7 +1091,7 @@ button:hover {
 
 /* Carousel Container */
 .carousel-container {
-    width: 82%;
+    width:88%;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
@@ -1160,8 +1237,8 @@ button:hover {
 .founder-container {
     /* margin-top: 5%; */
     width: 100%;
-    height: auto;
-    padding: 3% 0;
+    
+    /* padding: 3% 0; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1212,7 +1289,7 @@ button:hover {
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
     .founder-content p{
-        padding: 8%;
+        padding: 0 2.8%;
         font-size: 2vh;
     }
 }
