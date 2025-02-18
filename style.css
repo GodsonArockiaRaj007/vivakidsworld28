@@ -1388,7 +1388,8 @@ button:hover {
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Fixes the image in place */
     width: 100vh;
-    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
 }
 
 /* Content Styling */
