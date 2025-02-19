@@ -12,7 +12,11 @@ html, body {
     overflow-x: hidden;
     width: 100%;
   }
-  
+  @media screen and (max-width: 768px) {
+    body{
+        padding-top: 65px;
+    }
+}
 
   * {
     box-sizing: border-box;
@@ -1548,6 +1552,11 @@ padding-top: 5%;
     .founder-content p{
         padding: 0 2.8%;
         font-size: 2vh;
+    }
+    .founder-img img{
+       
+    
+        border-radius: 50%; width: 380px; height: 400px;
     }
     .founder-bg{
         height: 130vh;
