@@ -33,7 +33,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     
-    padding-top: 70px;
+    /* padding-top: 70px; */
     padding-bottom: 37px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on mobile */
@@ -410,63 +410,32 @@ html {
         transform: translateX(0);
     }
 }
-/* General Styles */
-.landing-container{
-    background-image: url('backcloud1.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire viewport */
-    background-repeat: no-repeat; /* Prevents repeating the image */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Fixes the image in place */
-    width: 100%;
-  
-   
-}
-
-/* General Styling */
-
-
-
-
-
-
-/* Individual Boxes */
-.card3 {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    border: 3px solid #17395c;
-    text-align: center;
-    width: 180px;
-    height: 160px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow like the reference */
+ /* General Styles */
+ .landing-container {
+    background-image: url('backcloud1.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed; 
+    
 }
 
 
-/* General Styles */
+
+/* Main Landing Page */
 .LandingPage {
-    /* width: 60%; */
-    text-align: left;
-    padding-left: 7%;
-   
-   /* Light background like the image */
-    height: auto;
-    position: relative;
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
+    padding-top: 90px; /* Offset for fixed header */
+    padding-bottom: 70px; /* Offset for fixed footer */
     text-align: center;
     opacity: 0;
     animation: fadeInLandingPage 1s forwards;
     animation-delay: 0.2s;
-     width: 100vh;
-    height: auto;
-    
+    width: 60%;
+    padding-left: 7%;
 }
 
 /* Heading */
 .LandingPage h3 {
-    
-    
     color: #17395c;
     font-size: 72px;
     font-weight: bolder;
@@ -476,73 +445,58 @@ html {
     transform: translateY(-20px);
     animation: slideInHeading 1s forwards;
     animation-delay: 0.5s;
+   
     text-align: left;
 }
 
 /* Box Container */
+/* Box Container */
 .container3 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    justify-content: center;
+    grid-template-columns: repeat(3, auto); /* Auto width to fit content */
+    gap: 5px; /* Reduced horizontal space */
+    justify-items: start; /* Align all cards to the left */
     align-items: center;
-    width: 80%;
-   
-    
-    
-   
-   
-   /* Align it to the left */
-   padding-left: 0; /* Remove extra left padding */
-    
     
     opacity: 0;
     animation: fadeInContainer 1s forwards;
     animation-delay: 0.4s;
 }
 
+/* Reduce default Bootstrap gutter space */
+
 /* Individual Boxes */
 .card3 {
     background: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 12px;
     border: 3px solid #17395c;
     text-align: center;
-    width: 160px;
-    height: 150px;
+    width: 150px; /* Adjusted width */
+    height: 140px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
     opacity: 0;
     transform: translateY(20px);
     animation: slideInCard 0.6s forwards;
 }
 
-/* Card Delays */
-.card3:nth-child(1) {
-    animation-delay: 1.5s;
-}
-.card3:nth-child(2) {
-    animation-delay: 1.6s;
-}
-.card3:nth-child(3) {
-    animation-delay: 1.7s;
-}
-.card3:nth-child(4) {
-    animation-delay: 1.8s;
-}
-.card3:nth-child(5) {
-    animation-delay: 1.9s;
-}
-.card3:nth-child(6) {
-    animation-delay: 2s;
-}
+/* Ensure Sequential Animation */
+.card3:nth-child(1) { animation-delay: 0.2s; }
+.card3:nth-child(2) { animation-delay: 0.4s; }
+.card3:nth-child(3) { animation-delay: 0.6s; }
+.card3:nth-child(4) { animation-delay: 0.8s; }
+.card3:nth-child(5) { animation-delay: 1.0s; }
+.card3:nth-child(6) { animation-delay: 1.2s; }
 
-/* Box Images */
 .card3 img {
-    width: 60px;
-    margin-bottom: 10px;
+    width: 50px; /* Adjusted image size */
+    margin-bottom: 5px;
     opacity: 0;
     animation: fadeInImage 0.8s forwards;
+    animation-delay: inherit; /* Ensure images appear with card */
 }
+
 
 /* Text in Boxes */
 .card3 p {
@@ -551,7 +505,7 @@ html {
     font-size: 14px;
 }
 
-/* Medium Screens */
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .LandingPage h3 {
         font-size: 50px;
@@ -567,7 +521,6 @@ html {
     }
 }
 
-/* Small Screens */
 @media (max-width: 768px) {
     .LandingPage h3 {
         font-size: 30px;
@@ -594,27 +547,22 @@ html {
         width: 100%;
         max-width: 320px;
     }
-
     .card3 {
         width: 100%;
         max-width: 280px;
         text-align: center;
     }
-
     .card3 img {
         width: 50px;
     }
-
     .card3 p {
         font-size: 14px;
     }
-
     .LandingPage {
         width: 100%;
         padding: 0%;
         text-align: center;
     }
-
     .LandingPage h3 {
         font-size: 23px;
         width: 100%;
@@ -622,45 +570,16 @@ html {
     }
 }
 
-/* Keyframes for animations */
-
-/* Landing page fade-in */
-@keyframes fadeInLandingPage {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Heading slide-in */
-@keyframes slideInHeading {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Container fade-in */
-@keyframes fadeInContainer {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Card slide-in */
+/* Keyframe Animations */
+@keyframes fadeInLandingPage { to { opacity: 1; } }
+@keyframes slideInHeading { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInContainer { to { opacity: 1; } }
+/* Keyframe Animations */
 @keyframes slideInCard {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
-/* Card image fade-in */
-@keyframes fadeInImage {
-    to {
-        opacity: 1;
-    }
-}
-
+@keyframes fadeInImage { to { opacity: 1; } }
 
 .about-us h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -1195,8 +1114,8 @@ button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-/* General Container */
-.container7 {
+ /* General Container */
+ .container7 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1211,10 +1130,12 @@ button:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    min-height:auto;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: auto;
+    padding-top: 5%;
 }
 
 /* Left Content */
@@ -1238,10 +1159,14 @@ button:hover {
 
 /* Right Content */
 .right-content {
-    text-align: center;
+    display: flex;
+    
     position: relative;
     width: 100%;
     max-width: 700px;
+}
+.right-dis{
+    width: 100%;
 }
 
 /* Tree Container */
@@ -1249,6 +1174,7 @@ button:hover {
     position: relative;
     width: 100%;
     max-width: 700px; /* Ensures image scales properly */
+    margin-left: 7%; /* Align image to left with padding */
 }
 
 /* Tree Image */
@@ -1256,7 +1182,6 @@ button:hover {
     width: 100%;  /* Makes it responsive */
     height: auto;
     display: block;
-    margin: 0 auto;
 }
 
 /* Circle Items */
@@ -1291,7 +1216,7 @@ button:hover {
     height: 60%;
 }
 
-/* Hover Content Below Image */
+/* Hover Content */
 .hover-content {
     width: 100%;
     max-width: 550px;
@@ -1305,8 +1230,9 @@ button:hover {
     font-weight: bold;
     display: none;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 105%; /* Position hover content to the right of the image */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Responsive Design */
@@ -1318,13 +1244,14 @@ button:hover {
     .left-content {
         width: 100%;
     }
-    
+
     .left-content p {
         font-size: 2vh;
     }
 
     .tree-container {
         max-width: 100%;
+        margin-left: 0; /* Adjust for smaller screens */
     }
 
     .circle-item {
@@ -1335,7 +1262,7 @@ button:hover {
     }
 
     .hover-content {
-        width: 90%;
+        left: 100%; /* Adjust position on smaller screens */
         font-size: 0.9rem;
     }
 }
@@ -1356,7 +1283,6 @@ button:hover {
         font-size: 0.8rem;
     }
 }
-
 .achive-heading h6, 
 .achive-heading h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -1375,7 +1301,7 @@ button:hover {
     overflow: hidden;
     padding-left: 6%;
     padding-right: 6%;
-    margin-top: 10vh;
+    
     
     
 }
@@ -1577,8 +1503,8 @@ padding-top: 5%;
 
 .founder-img img {
     border-radius: 5px;
-    width: 80%;
-    height: auto;
+    
+    border-radius: 50%; width: 380px; height: 400px;
 }
 
 .founder-content p {
@@ -1633,7 +1559,7 @@ padding-top: 5%;
     background: #173a5c;
    
     max-width: 100%;
-   
+   height: auto;
    
     text-align: center;
 }
@@ -1644,7 +1570,7 @@ padding-top: 5%;
     flex-direction: column;
     align-items: center; /* Keep content centered */
     text-align: left;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .contact-info p {
@@ -1653,7 +1579,7 @@ padding-top: 5%;
     color: #ffffff;
     display: flex;
     align-items: center;
-    gap: 12px;
+    /* gap: 12px; */
     width: 100%;
     max-width: 400px;
 }
@@ -1661,7 +1587,7 @@ padding-top: 5%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     color: #ffffff;
-    text-align: right;
+    text-align: left;
     bottom: 5;
 }
 
@@ -1687,9 +1613,9 @@ padding-top: 5%;
 
 /* Social Media Links */
 .social-links {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     /* margin-left: 33%; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     display: flex;
     justify-content: center;
     gap: 30px; /* Ensure spacing between icons */
