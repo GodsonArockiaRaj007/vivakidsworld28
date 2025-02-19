@@ -249,7 +249,7 @@ html {
 @media screen and (max-width: 768px) {
     .logo-img {
         width: 25%;
-        max-height: 60px;
+        max-height: 50px;
         margin-left: 3vh;
     }
 
@@ -267,7 +267,7 @@ html {
 @media screen and (max-width: 576px) {
     .logo-img {
         width: 30%;
-        max-height: 65px;
+        max-height: 55px;
         margin-left: 2vh;
     }
 
