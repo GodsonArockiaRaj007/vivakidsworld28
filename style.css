@@ -904,11 +904,15 @@ html {
 }
 
 /* Adjust the positioning and size of items for mobile and smaller screens */
+
 @media (max-width: 768px) {
     .advantage-item {
-        font-size: 1.8vh;
-        padding: 12px;
-        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }
 
@@ -1270,7 +1274,15 @@ button:hover {
         font-size: 0.9rem;
     }
 }
-
+@media (max-width: 900px) {
+    .hover-content {
+        left: 50%;
+        top: auto;
+        bottom: -50px;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+}
 @media (max-width: 480px) {
     .tree-container {
         max-width: 100%;
