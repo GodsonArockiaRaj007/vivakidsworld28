@@ -1376,6 +1376,21 @@ button:hover {
     border-radius: 10px;
     height: 300px;
 }
+/* Enable Manual Scrolling */
+.carousel-container {
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    position: relative;
+    border-radius: 10px;
+    max-height: 250px;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* Enhances touch scrolling */
+}
+
+/* Hide Scrollbar for Aesthetic */
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+}
 
 /* Smooth Scroll Animation */
 @keyframes scroll {
