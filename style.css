@@ -33,7 +33,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     
-    padding-top: 88px;
+    padding-top: 70px;
     padding-bottom: 37px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on mobile */
@@ -418,8 +418,7 @@ html {
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Fixes the image in place */
     width: 100%;
-    height: 100dvh; /* Uses dynamic viewport height */
-    overflow-y: auto; /* Prevents content overflow */
+  
    
 }
 
@@ -460,7 +459,7 @@ html {
     animation: fadeInLandingPage 1s forwards;
     animation-delay: 0.2s;
      width: 100vh;
-    height: 100vh;
+    height: auto;
     
 }
 
@@ -997,13 +996,13 @@ html {
     }
 }
 .advantage-infra-bg{
-    background-image: url('backcloud1.jpg'); /* Replace with your image path */
+    background-image: url('backcloud2.jpg'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Fixes the image in place */
-   height: 77dvh;
-   overflow-y: auto;
+   height: auto;
+   
 }
 .Infrastructue h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -1038,13 +1037,12 @@ html {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .pg-bg{
-    background-image: url('backcloud2.jpg'); /* Replace with your image path */
+    background-image: url('backcloud3.jpg'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Fixes the image in place */
-    height: 110dvh; /* Uses dynamic viewport height */
-    overflow-y: auto; /* Prevents content overflow */
+   height: auto;
 }
 
 
@@ -1208,12 +1206,12 @@ button:hover {
 }
 
 .con-bg {
-    background-image: url('backcloud3.jpg'); /* Replace with your image path */
+    background-image: url('backcloud2.jpg'); /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh; /* Changed to min-height to avoid hidden content */
+    min-height:auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1382,14 +1380,13 @@ button:hover {
     
 }
 .achive-bg{
-    background-image: url('backcloud1.jpg'); /* Replace with your image path */
+    background-image: url('backcloud3.jpg'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Fixes the image in place */
     width: 100vh;
-    height: 100dvh;
-    overflow-y: auto;
+    height:auto;
 }
 
 /* Content Styling */
@@ -1563,7 +1560,7 @@ button:hover {
     background-position: center; /* Centers the image */
   
    width: 100%;
-   
+   height: 100vh;
 }
 .founder-container {
     /* margin-top: 5%; */
@@ -1575,8 +1572,7 @@ padding-top: 5%;
     background-repeat: no-repeat;
     
     width: 100vh;
-    height: 100dvh; /* Uses dynamic viewport height */
-    overflow-y: auto; /* Prevents content overflow */
+    height: auto; /* Prevents content overflow */
 }
 
 .founder-img img {
@@ -1626,6 +1622,9 @@ padding-top: 5%;
     .founder-content p{
         padding: 0 2.8%;
         font-size: 2vh;
+    }
+    .founder-bg{
+        height: 130vh;
     }
 }
 
