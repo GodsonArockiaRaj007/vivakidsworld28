@@ -266,7 +266,7 @@
     padding: 5px;
     /* color: #662d91; */
     transform: scale(1.1);
-    color: #17395c;
+    /* color: #17395c; */
     /* border: 1px solid #662d91;
     border-radius: 5px; */
 }
@@ -305,11 +305,11 @@
     .navbar-border {
         width: 100%;
         text-align: center;
-        
+    
         border-radius: 20px;
-        padding: 5px 23px;
+        /* padding: 5px 23px; */
         justify-items: right;
-        position: fixed;
+        
     }
     .btn p{
         font-size: 1.3vh;
@@ -317,8 +317,9 @@
     .navbar-nav {
         flex-direction: column;
         align-items: center;
-        width: 18vh;
+        width: 100%;
         background-color: #17395c;
+        position: relative;
 
     }
 
@@ -390,6 +391,33 @@
         height: 1.5px;
     }
 }
+@media screen and (max-width: 992px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 70px;  /* Adjust as per header height */
+        left: 0;
+        width: 100%;
+        background-color: #17395c; /* Same as menu background */
+        text-align: center;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        background-color: #17395c;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        color: white;
+        font-size: 18px;
+    }
+}
 
 /* Add animation for all elements that should appear one by one */
 
@@ -400,6 +428,7 @@
 .navbar-nav a:nth-child(5) { animation-delay: 0.9s; }
 .navbar-nav a:nth-child(6) { animation-delay: 1s; }
 .navbar-nav a:nth-child(7) { animation-delay: 1.1s; }
+
 
     </style>
 </head>
@@ -432,26 +461,22 @@
         </header>
     </div>
     <script>
-   document.addEventListener("DOMContentLoaded", function() {
-        // Get the navbar toggler button and the navbar menu
-        const navbarToggler = document.querySelector(".navbar-toggler");
-        const navbarMenu = document.querySelector("#navbarNav");
+    document.addEventListener("DOMContentLoaded", function() {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarMenu = document.querySelector("#navbarNav");
 
-        // Initially hide the navbar on small screens
-        navbarMenu.style.display = "none";
+    navbarMenu.style.display = "none"; // Initially hidden
 
-        // Add a click event listener to toggle the navbar visibility
-        navbarToggler.addEventListener("click", function() {
-            // Check if the navbar is visible
-            if (navbarMenu.style.display === "none" || navbarMenu.style.display === "") {
-                // Show the navbar
-                navbarMenu.style.display = "block";
-            } else {
-                // Hide the navbar
-                navbarMenu.style.display = "none";
-            }
-        });
+    navbarToggler.addEventListener("click", function() {
+        if (navbarMenu.style.display === "none" || navbarMenu.style.display === "") {
+            navbarMenu.style.display = "block";
+            navbarMenu.style.width = "100%"; // Ensure full width
+        } else {
+            navbarMenu.style.display = "none";
+        }
     });
+});
+
 
         </script>
     <div class="container" id="mainContent">

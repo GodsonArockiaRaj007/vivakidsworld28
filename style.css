@@ -14,7 +14,7 @@ html, body {
   }
   @media screen and (max-width: 768px) {
     body{
-        padding-top: 65px;
+        padding-top: 68px;
     }
 }
 
@@ -179,7 +179,7 @@ html {
     padding: 5px;
     /* color: #662d91; */
     transform: scale(1.1);
-    color: #17395c;
+    /* color: #17395c; */
     /* border: 1px solid #662d91;
     border-radius: 5px; */
 }
@@ -218,11 +218,11 @@ html {
     .navbar-border {
         width: 100%;
         text-align: center;
-        
+    
         border-radius: 20px;
-        padding: 5px 23px;
+        /* padding: 5px 23px; */
         justify-items: right;
-        position: fixed;
+        
     }
     .btn p{
         font-size: 1.3vh;
@@ -230,8 +230,9 @@ html {
     .navbar-nav {
         flex-direction: column;
         align-items: center;
-        width: 18vh;
+        width: 100%;
         background-color: #17395c;
+        position: relative;
 
     }
 
@@ -301,6 +302,33 @@ html {
     .navbar-toggler-icon {
         width: 18px;  /* Even smaller toggle icon */
         height: 1.5px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 70px;  /* Adjust as per header height */
+        left: 0;
+        width: 100%;
+        background-color: #17395c; /* Same as menu background */
+        text-align: center;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        background-color: #17395c;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        color: white;
+        font-size: 18px;
     }
 }
 
@@ -421,6 +449,7 @@ html {
     background-repeat: no-repeat; 
     background-position: center; 
     background-attachment: fixed; 
+    height: 100vh;
     
 }
 
@@ -428,13 +457,13 @@ html {
 
 /* Main Landing Page */
 .LandingPage {
-    padding-top: 90px; /* Offset for fixed header */
-    padding-bottom: 70px; /* Offset for fixed footer */
+    padding-top: 70px; /* Offset for fixed header */
+    padding-bottom: 40px; 
     text-align: center;
     opacity: 0;
     animation: fadeInLandingPage 1s forwards;
     animation-delay: 0.2s;
-    width: 60%;
+    width: 50%;
     padding-left: 7%;
 }
 
@@ -452,10 +481,15 @@ html {
    
     text-align: left;
 }
+@media (max-width: 480px) {
+.landing-container{
+    height: 130vh;
+}
+}
 
 /* Box Container */
 /* Box Container */
-.container3 {
+.container8 {
     display: grid;
     grid-template-columns: repeat(3, auto); /* Auto width to fit content */
     gap: 5px; /* Reduced horizontal space */
@@ -564,13 +598,13 @@ html {
     }
     .LandingPage {
         width: 100%;
-        padding: 0%;
+        
         text-align: center;
     }
     .LandingPage h3 {
-        font-size: 23px;
+        font-size: 25px;
         width: 100%;
-        margin: 10px auto;
+        /* margin: 10px auto; */
     }
 }
 
@@ -1583,98 +1617,99 @@ padding-top: 5%;
     .founder-img img{
        
     
-        border-radius: 50%; width: 380px; height: 400px;
+        border-radius: 50%; width: 300px; height: 300px;
     }
     .founder-bg{
         height: 130vh;
     }
 }
 
-/* Contact Box */
+/* Contact Container */
 .contact-container {
     background: #173a5c;
-   
     max-width: 100%;
-   height: auto;
-   
+    
     text-align: center;
 }
 
-/* Contact Information */
-.contact-info {
+/* Flexbox for layout */
+.contact-content {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Keep content centered */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Contact Info (Left) */
+.contact-info {
+    flex: 1;
     text-align: left;
-    /* gap: 10px; */
+    max-width: 400px;
+    margin-top: 5%;
 }
 
 .contact-info p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     color: #ffffff;
     display: flex;
+    gap: 10px;
     align-items: center;
-    /* gap: 12px; */
-    width: 100%;
-    max-width: 400px;
-}
-.contact-infocopy {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-    color: #ffffff;
-    text-align: left;
-    bottom: 5;
+    
 }
 
 .contact-info i {
-    color: #007BFF;
+    color: #ebebeb;
     font-size: 18px;
     min-width: 25px;
     text-align: center;
 }
-
-
-/* Align links properly */
-.contact-info a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: 500;
-    flex-grow: 1;
+.contact-info-copy{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #ffffff;
+    max-width: 600px;
+   text-align: center;
+    
+    
+}
+/* Google Map (Right) */
+.map-container {
+    flex: 1;
+    max-width: 450px;
+    height: 250px;
+    margin-left: 50px;
+    margin-top: 5%;
 }
 
-.contact-info a:hover {
-    text-decoration: underline;
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 /* Social Media Links */
 .social-links {
-    /* margin-top: 10px; */
-    /* margin-left: 33%; */
-    /* margin-bottom: 10px; */
     display: flex;
-    justify-content: center;
-    gap: 30px; /* Ensure spacing between icons */
+    justify-content: start;
+    gap: 10px;
 }
 
-/* Social Media Icon Styling */
 .social-icon {
     font-size: 24px;
-    /* padding: 12px; */
-    border-radius: 50%;
     color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
-    
-    margin-left: 5%;
     justify-content: center;
-    width: 45px;
-    height: 45px;
-    transition: transform 0.3s, background 0.3s;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-/* Social Media Icon Colors */
 .instagram { background: #E1306C; }
 .twitter { background: #1DA1F2; }
 .facebook { background: #1877F2; }
@@ -1685,38 +1720,23 @@ padding-top: 5%;
 }
 
 /* Responsive Fixes */
-@media (max-width: 992px) {
-    .contact-container {
-        max-width: 80%;
-    }
-}
-
 @media (max-width: 768px) {
-    .contact-container {
-        max-width: 90%;
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .contact-info p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .contact-container {
+    .contact-info, .map-container {
         max-width: 100%;
-        padding: 15px;
+        text-align: center;
+        margin-left: 0;
     }
 
-    .contact-info p {
-        font-size: 12px;
-    }
-
-    .social-icon {
-        font-size: 20px;
-        width: 40px;
-        height: 40px;
+    .social-links {
+        justify-content: center;
     }
 }
+
 img {
     max-width: 100%;
     height: auto;
