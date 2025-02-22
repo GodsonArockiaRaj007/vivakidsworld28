@@ -38,8 +38,8 @@ body {
     margin: 0;
     
     /* padding-top: 70px; */
-    padding-bottom: 37px;
-    overflow-y: auto;
+    padding-bottom: 30px;
+    
     -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on mobile */
 }
 html {
@@ -52,7 +52,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 55px;
+    height: 50px;
     background-color: #17395c;
     display: flex;
     justify-content: center;
@@ -455,6 +455,7 @@ html {
 
 
 
+
 /* Main Landing Page */
 .LandingPage {
     padding-top: 70px; /* Offset for fixed header */
@@ -511,7 +512,7 @@ html {
     border: 3px solid #17395c;
     text-align: center;
     width: 150px; /* Adjusted width */
-    height: 140px;
+    height: 130px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     
     opacity: 0;
@@ -988,6 +989,9 @@ html {
     line-height: 1.8;
     padding-bottom: 5%;
 }
+.advantage-infra-bg {
+    overflow: hidden; /* Ensures no extra space appears due to floated elements */
+}
 @media (max-width: 768px) {
     .Infrastructue p{
     font-size: 2vh;    
@@ -1133,6 +1137,12 @@ html {
     transform: rotateY(180deg);
     font-size: 1.5rem;
 }
+.pg-bg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Circle Images */
 #circle1 { background-image: url('pongal.jpeg'); }
@@ -1254,13 +1264,17 @@ button:hover {
 .circle-item:nth-child(4) { top: 65%; left: 50%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(5) { top: 57%; left: 34%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(6) { top: 20.5%; left: 73.5%; transform: translate(-50%, -50%); }
-
+.circle-item:nth-child(8) { top: 30.5%; left: 35%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(9) { top: 12%; left: 49%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(10) { top: 60.5%; left: 63%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(11) { top: 15.8%; left: 61%; transform: translate(-50%, -50%); }
 /* Default style for all icons */
 .circle-item img {
     object-fit: contain;
     width: 60%;
     height: 60%;
 }
+
 
 /* Hover Content */
 .hover-content {
@@ -1280,7 +1294,11 @@ button:hover {
     top: 50%;
     transform: translateY(-50%);
 }
-
+@media (max-width: 360px) {
+ .hover-content{
+    font-size: 0.6rem;
+ }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .container7 {
@@ -1335,6 +1353,7 @@ button:hover {
 
     .hover-content {
         font-size: 0.8rem;
+        padding: 0%;
     }
 }
 .achive-heading h6, 
