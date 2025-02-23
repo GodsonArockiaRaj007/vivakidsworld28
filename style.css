@@ -458,14 +458,14 @@ html {
 
 /* Main Landing Page */
 .LandingPage {
-    padding-top: 70px; /* Offset for fixed header */
+    padding-top: 90px; /* Offset for fixed header */
     padding-bottom: 40px; 
     text-align: center;
     opacity: 0;
     animation: fadeInLandingPage 1s forwards;
     animation-delay: 0.2s;
-    width: 50%;
-    padding-left: 7%;
+    width: 55%;
+    padding-left: 6%;
 }
 
 /* Heading */
@@ -493,10 +493,10 @@ html {
 .container8 {
     display: grid;
     grid-template-columns: repeat(3, auto); /* Auto width to fit content */
-    gap: 5px; /* Reduced horizontal space */
+    /* Reduced horizontal space */
     justify-items: start; /* Align all cards to the left */
     align-items: center;
-    
+    margin: 0%;
     opacity: 0;
     animation: fadeInContainer 1s forwards;
     animation-delay: 0.4s;
@@ -779,6 +779,13 @@ html {
         padding: 0;
         width: 100%;
     }
+    .image-container2 {
+        width: 100%;
+    }
+    .row {
+        display: flex;
+        flex-direction: column-reverse; /* Reverses order */
+    }
 }
 @media (min-width: 992px) {
     /* Ensure the row container uses flexbox */
@@ -961,7 +968,7 @@ html {
     }
 }
 .advantage-infra-bg{
-    background-image: url('backcloud2.jpg'); /* Replace with your image path */
+    background-image: url('backcloud2.jpg'); 
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
@@ -999,7 +1006,7 @@ html {
 }
 .program-container{
     width: 100%;
-    height:100vh; 
+    height:95vh; 
     position: relative;
     padding-left: 7%;
     padding-right: 7%;
@@ -1041,7 +1048,7 @@ html {
    
     text-align: justify;
     color: #17395c;
-   margin-top: 15px;
+   margin-top: 10px;
     font-size: 2.5vh;
     line-height: 1.8;
 }
@@ -1077,6 +1084,7 @@ html {
     .play-school-content h2{
         text-align: justify;
     } 
+   
 }
 
 .program-container1 {
@@ -1092,10 +1100,10 @@ html {
 
 /* Flip Box */
 .flip-box {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     perspective: 1000px;
-    margin: 0 auto 15px auto; /* Center and space out */
+    margin: 0 auto 10px auto; /* Center and space out */
 }
 
 .flip-box-inner {
@@ -1123,8 +1131,10 @@ html {
 }
 .flip-box-back p{
     padding-top: 5%;
-    font-size: large;
+    font-size: 2.3vh;
 }
+
+
 .flip-box-back {
     background-color: white;
     color: #17395c;
@@ -1133,10 +1143,11 @@ html {
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 40px;
+    padding: 30px;
     transform: rotateY(180deg);
-    font-size: 1.5rem;
+    
 }
+  
 .pg-bg {
     min-height: 100vh;
     display: flex;
@@ -1169,6 +1180,12 @@ button:hover {
     /* background-color: #521d70; */
     transform: scale(1.05);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 576px) {  /* Targets screens smaller than 576px (mobile) */
+    .flip-box-back p {
+        font-size: 1.8vh;  /* Reduce font size for smaller screens */
+        padding-top: 2%;   /* Adjust padding for better spacing */
+    }
 }
  /* General Container */
  .container7 {
@@ -1229,7 +1246,7 @@ button:hover {
 .tree-container {
     position: relative;
     width: 100%;
-    max-width: 700px; /* Ensures image scales properly */
+    max-width: 800px; /* Ensures image scales properly */
     margin-left: 7%; /* Align image to left with padding */
 }
 
@@ -1354,6 +1371,17 @@ button:hover {
     .hover-content {
         font-size: 0.8rem;
         padding: 0%;
+    }
+}
+@media (max-width: 768px) { /* Target tablets and smaller screens */
+    .tree-image {
+        width: 120%; /* Increase the size */
+    }
+}
+
+@media (max-width: 480px) { /* Target mobile screens */
+    .tree-image {
+        width: 140%; /* Further increase size for smaller screens */
     }
 }
 .achive-heading h6, 
@@ -1646,65 +1674,93 @@ padding-top: 5%;
         height: 130vh;
     }
 }
-
+/* Contact Container */
 /* Contact Container */
 .contact-container {
     background: #173a5c;
     max-width: 100%;
-    
+    height: auto;
     text-align: center;
+    padding: 20px;
+}
+
+/* Title Styling */
+.contact-title {
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Flexbox for layout */
 .contact-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1000px;
+    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Contact Info (Left) */
+/* Left Side (Image + Contact Details SIDE BY SIDE) */
+.contact-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Contact Image */
+.contact-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contact Info */
 .contact-info {
-    flex: 1;
     text-align: left;
-    max-width: 400px;
-    margin-top: 5%;
 }
 
 .contact-info p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     color: #ffffff;
     display: flex;
     gap: 10px;
     align-items: center;
-    
 }
 
-.contact-info i {
-    color: #ebebeb;
-    font-size: 18px;
-    min-width: 25px;
-    text-align: center;
+/* Social Media Links */
+.social-links {
+    margin-left: 10%;
+    display: flex;
+    gap: 10px;
 }
-.contact-info-copy{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
-    color: #ffffff;
-    max-width: 600px;
-   text-align: center;
-    
-    
+
+.social-icon {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s;
 }
-/* Google Map (Right) */
+
+.instagram { background: #E1306C; }
+.x-twitter { background: #000000; } /* Updated X (Twitter) */
+.facebook { background: #1877F2; }
+.youtube { background: #FF0000; } /* Added YouTube */
+.linkedin { background: #0077B5; } /* Added LinkedIn */
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Right Side (Smaller Google Map) */
 .map-container {
-    flex: 1;
-    max-width: 450px;
-    height: 250px;
-    margin-left: 50px;
-    margin-top: 5%;
+    max-width: 250px;
+    height: 170px;
 }
 
 .map-container iframe {
@@ -1713,33 +1769,30 @@ padding-top: 5%;
     border-radius: 10px;
 }
 
-/* Social Media Links */
-.social-links {
-    display: flex;
-    justify-content: start;
-    gap: 10px;
+/* Get Directions Button */
+.contact-button {
+    text-align: center;
+    margin-top: 1%;
 }
 
-.social-icon {
-    font-size: 24px;
+.directions-btn {
+    background: #007BFF;
     color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s, opacity 0.3s;
+    border-radius: 5px;
+    display: inline-block;
 }
 
-.instagram { background: #E1306C; }
-.twitter { background: #1DA1F2; }
-.facebook { background: #1877F2; }
+.directions-btn:hover {
+    background: #0056b3;
+}
 
-.social-icon:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+/* Footer */
+.contact-info-copy {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
 }
 
 /* Responsive Fixes */
@@ -1749,15 +1802,30 @@ padding-top: 5%;
         align-items: center;
     }
 
-    .contact-info, .map-container {
-        max-width: 100%;
-        text-align: center;
-        margin-left: 0;
+    .contact-left {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .social-links {
-        justify-content: center;
+    .contact-info {
+        text-align: center;
     }
+
+    .map-container {
+        max-width: 100%;
+    }
+}
+.address-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 400px; /* Adjust based on your layout */
+}
+
+.address-indent {
+    display: block;
+    margin-left: 97px; /* Adjust based on Address label width */
+    line-height: 0;
 }
 
 img {
