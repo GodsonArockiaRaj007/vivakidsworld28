@@ -1661,6 +1661,10 @@ padding-top: 5%;
   
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
+    .founder-bg{
+        height: auto;
+        padding-bottom: 5%;
+    }
     .founder-content p{
         padding: 0 2.8%;
         font-size: 2vh;
@@ -1670,9 +1674,7 @@ padding-top: 5%;
     
         border-radius: 50%; width: 300px; height: 300px;
     }
-    .founder-bg{
-        height: 130vh;
-    }
+    
 }
 /* Contact Container */
 /* Contact Container */
@@ -1813,6 +1815,8 @@ padding-top: 5%;
 
     .map-container {
         max-width: 100%;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 }
 .address-line {
