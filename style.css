@@ -486,6 +486,9 @@ html {
 .landing-container{
     height: auto;
 }
+.LandingPage {
+padding: 0%;
+}
 }
 
 /* Box Container */
@@ -575,6 +578,9 @@ html {
     .card3 img {
         width: 50px;
     }
+    .landing-container{
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -584,11 +590,11 @@ html {
         align-items: center;
         justify-content: center;
         width: 100%;
-        max-width: 320px;
+        max-width: 500px;
     }
     .card3 {
         width: 100%;
-        max-width: 280px;
+        max-width: 580px;
         text-align: center;
     }
     .card3 img {
@@ -599,7 +605,7 @@ html {
     }
     .LandingPage {
         width: 100%;
-        
+        padding: 0%;
         text-align: center;
     }
     .LandingPage h3 {
@@ -620,6 +626,42 @@ html {
 }
 @keyframes fadeInImage { to { opacity: 1; } }
 
+@media (max-width: 480px) {
+    .container8 {
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .card3 {
+        width: 100%; /* Increased width */
+        max-width: 700px; /* Adjust max width */
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .card3 img {
+        width: 60px; /* Slightly larger images */
+    }
+    
+    .card3 p {
+        font-size: 16px; /* Slightly larger text */
+    }
+    
+    .LandingPage {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .LandingPage h3 {
+        font-size: 25px;
+        text-align: center;
+        width: 100%;
+    }
+}
 .about-us h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -705,7 +747,8 @@ html {
     font-size: 2.8vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #17395c;
-    border-left: 3px solid #4873b4;
+    border-left: 3px solid #4873b4 ;
+    padding-left: 10px;
     
 }
 
@@ -778,6 +821,10 @@ html {
         margin: 0; /* Resets all margins */
         padding: 0;
         width: 100%;
+        padding-bottom: 6%;
+    }
+    .image-container1 {
+    padding-bottom: 8%;
     }
     .image-container2 {
         width: 100%;
@@ -1074,7 +1121,7 @@ html {
         width: 100%; /* Take full width on small screens */
     }
     .play-school-content h2{
-        text-align: justify !important;
+        text-align: center !important;
     }
 }
 @media (max-width: 480px) {
@@ -1082,7 +1129,7 @@ html {
         font-size: 2vh;
     }
     .play-school-content h2{
-        text-align: justify;
+        text-align: center;
     } 
    
 }
@@ -1310,6 +1357,7 @@ button:hover {
     left: 105%; /* Position hover content to the right of the image */
     top: 50%;
     transform: translateY(-50%);
+    margin-bottom: 5%;
 }
 @media (max-width: 360px) {
  .hover-content{
@@ -1808,9 +1856,14 @@ padding-top: 5%;
         flex-direction: column;
         align-items: center;
     }
-
+.social-links {
+    align-items: left;
+    justify-content: left;
+    margin-left: 15%;
+}
     .contact-info {
         text-align: center;
+        padding-left: 8%;
     }
 
     .map-container {
