@@ -1907,3 +1907,14 @@ img {
     }
 
 }
+@media (max-width: 302px) {
+    .contact-info p{
+        font-size: 1.5vh;
+    }
+    .address-indent {
+        
+        margin-left: 67px; /* Adjust based on Address label width */
+       
+    }
+
+}
