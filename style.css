@@ -1782,13 +1782,14 @@ padding-top: 5%;
 
 /* Social Media Links */
 .social-links {
-    
+    padding-top: 3%;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .social-icon {
+    
     font-size: 20px;
     color: white;
     text-decoration: none;
@@ -1894,4 +1895,15 @@ padding-top: 5%;
 img {
     max-width: 100%;
     height: auto;
+}
+@media (max-width: 383px) {
+    .contact-info p{
+        font-size: 1.9vh;
+    }
+    .address-indent {
+        
+        margin-left: 79px; /* Adjust based on Address label width */
+       
+    }
+
 }
