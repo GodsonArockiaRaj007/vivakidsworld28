@@ -609,7 +609,7 @@ padding: 0%;
         text-align: center;
     }
     .LandingPage h3 {
-        font-size: 25px;
+        font-size: large;
         width: 100%;
         /* margin: 10px auto; */
     }
@@ -657,7 +657,7 @@ padding: 0%;
     }
     
     .LandingPage h3 {
-        font-size: 25px;
+        font-size: 30px;
         text-align: center;
         width: 100%;
     }
