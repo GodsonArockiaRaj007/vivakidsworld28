@@ -1909,12 +1909,44 @@ img {
 }
 @media (max-width: 302px) {
     .contact-info p{
-        font-size: 1.5vh;
+        font-size: 1.4vh;
     }
     .address-indent {
         
-        margin-left: 67px; /* Adjust based on Address label width */
+        margin-left: 64px; /* Adjust based on Address label width */
        
     }
 
+}
+/* Contact Info Grid - Reduce Space */
+.contact-info {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 90px auto; /* Reduce label width */
+    gap: 5px 10px; /* Reduce row & column spacing */
+    align-items: start; /* Align items to the top */
+    max-width: 400px;
+}
+
+/* Reduce space between text lines */
+.contact-info p {
+    margin: 0; /* Remove extra margin */
+    padding: 0; /* Remove extra padding */
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Reduce label spacing */
+.contact-info strong {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 2px; /* Reduce spacing */
+}
+
+/* Responsive Fix */
+@media (max-width: 400px) {
+    .contact-info {
+        grid-template-columns: 80px auto; /* Reduce further on small screens */
+    }
 }
