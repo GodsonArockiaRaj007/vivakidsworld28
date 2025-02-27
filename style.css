@@ -603,6 +603,16 @@ html {
     font-size: 6vh;
 }
 }
+/* Mobile View: 2 Cards per Row */
+@media (max-width: 768px) {
+    .container8 {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 15px;
+        justify-content: center; /* Center align */
+    }
+}
+
+/* Mobile View: Slideshow on Top */
 @media (max-width: 1024px) {
     .landing-container {
         flex-direction: column;
@@ -611,20 +621,20 @@ html {
     }
 
     .slideshow-container {
-        order: 1; /* Slideshow comes first */
+        order: 1; /* Move Slideshow to Top */
         max-width: 100%;
         display: flex;
         justify-content: center;
     }
 
     .LandingPage {
-        order: 2; /* Moves the text section below slideshow */
+        order: 2;
         max-width: 100%;
         text-align: center;
     }
 
     .container8 {
-        order: 3; /* Keeps the cards at the bottom */
+        order: 3;
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         justify-items: center;
     }
@@ -700,7 +710,7 @@ html {
 
 .image-container2 img {
     width: 100%;
-    
+    height: auto;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -720,6 +730,7 @@ html {
     color: #17395c;
     border-left: 3px solid #4873b4 ;
     padding-left: 10px;
+    
     
 }
 
@@ -766,7 +777,8 @@ html {
         display: block; /* Remove any extra spacing */
     }
     .image-container2 {
-        max-width: 300px;
+        width: 300px;
+        height: auto;
         display: flex;
         justify-content: center; /* Centers the image horizontally */
         align-items: center; /* Centers the image vertically if needed */
@@ -774,7 +786,7 @@ html {
     }
 
     .image-container2 img {
-        max-width: 100%;
+        width: 100%;
         height: auto; /* Maintain aspect ratio */
         display: block; /* Remove any extra spacing */
     }
@@ -806,56 +818,29 @@ html {
     }
     
 }
-@media (min-width: 992px) {
-    /* Ensure the row container uses flexbox */
-    .row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* Ensures proper spacing */
-    }
 
-    /* Move the image to the right */
-    .col-lg-6.text-center {
-        display: flex;
-        justify-content: flex-end; /* Aligns the image container to the right */
-    }
 
-    /* Ensure image container has no extra margins */
     .image-container1 {
-        margin: 0; /* Resets all margins */
-        padding: 0; /* Resets all paddings */
-       
+      
         display: flex;
-        justify-content: flex-end; /* Moves image inside container to the right */
-        /* margin-right: 2%; */
+        justify-content: flex-end;
+        align-items: flex-start; /* Align image at the top */
+        margin-top: -100px; /* Adjust as needed to remove space */
     }
 
-    /* Ensure the image itself aligns properly */
-    .image-container1 img {
-        
-        width: 100%;
-        height: 500px;
-        display: block; /* Removes extra spacing from inline elements */
-        margin: 0; /* Ensures no unwanted margins */
-        margin-left: 1%;
-    }
-    .image-container2 {
-        margin: 0; /* Resets all margins */
-        padding: 0; /* Resets all paddings */
-        width: 100%;
-        display: flex;
-        justify-content: flex-end; /* Moves image inside container to the right */
+    @media (max-width: 992px) {
+        .image-container1 {
+            margin-top: 0px;
+        }
+        .image-container1 img{
+           
+            width: 100%;
+            height: 500px;
+            display: block;
+        }
+
     }
 
-    /* Ensure the image itself aligns properly */
-    .image-container2 img {
-        width: 100%;
-        height: 500px;
-        display: block; /* Removes extra spacing from inline elements */
-        margin: 0;
-}
-
-}
 /* Hide content initially */
 .about-us h1, .about-us .row {
     opacity: 0;
@@ -881,6 +866,75 @@ html {
     opacity: 1;
     transform: translateX(0); /* Move to original position */
 }
+/* Desktop Layout */
+@media (min-width: 992px) {
+    .row {
+        display: flex;
+        align-items: center;
+    }
+    .image-container2 {
+        display: block;
+        max-width: 450px;
+        width: 100%;
+    }
+    .philosophy-content {
+        text-align: justify;
+        padding-left: 20px; /* Space between text and image */
+    }
+    .image-container-mobile {
+        display: none; /* Hide extra mobile image */
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 992px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+    }
+    .philosophy-content {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+    .image-container2 {
+        display: none; /* Hide main image on mobile */
+    }
+    .image-container-mobile {
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+        max-width: 550px;
+    }
+    .subtitle {
+        order: 3;
+        text-align: center;
+        font-size: 2.4vh;
+    }
+    .philosophy-content p {
+        order: 4;
+        font-size: 2vh;
+    }
+}
+@media (max-width: 992px) {
+    .image-container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 auto; /* Center the container */
+    }
+
+    .image-container1 img {
+        width: 100%;  /* Ensures it takes full width */
+        max-width: 550px; /* Adjust for responsiveness */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Prevents cropping */
+        display: block;
+    }
+}
+
 
 .advantage-container{
     padding-left: 7%;
@@ -1185,10 +1239,10 @@ html {
 }
 
 /* Circle Images */
-#circle1 { background-image: url('little1.jpg'); }
+#circle1 { background-image: url('playgroupimg.jpg')}
 #circle2 { background-image: url('little2.jpg'); }
-#circle3 { background-image: url('christmas.jpeg'); }
-#circle4 { background-image: url('ramzan.jpeg'); }
+#circle3 { background-image: url('little1.jpg'); }
+#circle4 { background-image: url('seniorkgimg.jpg'); }
 
 /* Buttons */
 button {
@@ -1421,188 +1475,84 @@ button:hover {
     }
 }
 .achive-heading h6, 
-.achive-heading h1 {
+.achive-heading h1 ,
+.achive-content li{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #17395c;
 }
-@media (max-width: 768px) {
-    .achive-heading h6 {
-        text-align: center;
-    }
+.achive-content li{
+text-align: justify;
 }
-
-/* Achievement Container */
 .achievement-container {
     width: 100%;
-    height: auto;
-    position: relative;
+    text-align: center;
+    padding: 6%;
+    padding-top: 0%;
+}
+.achive-bg {
+    background-image: url('bgphilosophy.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    overflow: hidden;
-    padding-left: 6%;
-    padding-right: 6%;
-    
-    
-    
-}
-.achive-bg{
-    background-image: url('backcloud3.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire viewport */
-    background-repeat: no-repeat; /* Prevents repeating the image */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Fixes the image in place */
+    background-attachment: fixed;
     width: 100vh;
-    height:auto;
+    height: auto;
 }
-
-/* Content Styling */
 .achive-content p {
     text-align: justify;
-    
     color: #17395c;
     font-size: 2.5vh;
     line-height: 1.8;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
 }
 
-/* Carousel Section */
-.scroll- {
+/* Updated Carousel Section */
+.carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
-    /* padding-right: 10px;; */
-}
-
-/* Carousel Container */
-.carousel-container {
-    width:100%;
+    width: 100%;
     overflow: hidden;
-    position: relative;
-    border-radius: 10px;
-    max-height: 250px;
+    height: auto;
+    margin-top: 20px;
 }
-
-/* Carousel Track */
 .carousel-track {
     display: flex;
-    gap: 10px;
-    animation: scroll 15s linear infinite;
-    will-change: transform;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Makes it responsive */
 }
-
-/* Individual Images */
 .carousel-image {
-    width: calc(33.33% - 10px);
-    flex-shrink: 0;
+    width: calc(20% - 10px); /* Display 5 images at a time */
+   height: auto;
     object-fit: cover;
     border-radius: 10px;
-    height: 220px;
-}
-/* Enable Manual Scrolling */
-.carousel-container {
-    width: 100%;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    position: relative;
-    border-radius: 10px;
-    max-height: 250px;
-    scroll-behavior: smooth; /* Smooth scrolling */
-    -webkit-overflow-scrolling: touch; /* Enhances touch scrolling */
-}
-
-/* Hide Scrollbar for Aesthetic */
-.carousel-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Webkit browsers */
-}
-
-/* Smooth Scroll Animation */
-@keyframes scroll {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
 }
 
 /* ================= MEDIA QUERIES ================= */
 
-/* Tablets (max-width: 1024px) */
+/* Tablets (max-width: 1024px) - Show 3 images */
 @media (max-width: 1024px) {
-    .achive-heading h1 {
-        font-size: 2.5rem; /* Reduce heading size */
-    }
-
-    .achive-content p {
-        font-size: 2vh; /* Reduce font size */
-        /* padding: 0 10%; */
-    }
-
-    .carousel-container {
-        width: 100%; /* Slightly wider on smaller screens */
-        
-    }
-
     .carousel-image {
-        width: calc(50% - 10px); /* Show two images at a time */
-        height: 250px;
+        width: calc(33.33% - 10px);
     }
 }
 
-/* Mobile Devices (max-width: 768px) */
+/* Mobile Devices (max-width: 768px) - Show 1 image */
 @media (max-width: 768px) {
-    .achive-heading h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .achive-content p {
-        font-size: 2vh;
-        /* padding: 0 8%; */
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-
-    .carousel-container {
-        width: 100%;
-        
-    }
-
-    .carousel-image {
-        width: calc(100% - 10px); /* Show one image at a time */
-        height: 220px;
-    }
-
     .carousel-track {
-        animation-duration: 10s; /* Faster scrolling on small screens */
+        justify-content: center;
+    }
+    .carousel-image {
+        width: 80%; /* Show only one image */
     }
 }
 
 /* Small Phones (max-width: 480px) */
 @media (max-width: 480px) {
-    .achive-heading h1 {
-        font-size: 1.8rem;
-    }
-
-    .achive-content p {
-        font-size: 2vh;
-       
-    }
-
-    .carousel-container {
-        width: 100%;
-        
-    }
-
     .carousel-image {
-        width: 100%; /* Full width */
-        height: 200px;
+        width: 100%;
     }
 }
-
 /* .scroll-wrapper {
     display: flex;
     gap: 10px;
@@ -1643,12 +1593,12 @@ button:hover {
     background-position: center; /* Centers the image */
   
    width: 100%;
-   height: 100vh;
+   height: 107vh;
 }
 .founder-container {
     /* margin-top: 5%; */
     width: 100%;
-padding-top: 5%;
+padding-top: 0%;
     /* padding: 3% 0; */
     background-size: cover;
     background-position: center;
@@ -1661,7 +1611,7 @@ padding-top: 5%;
 .founder-img img {
     border-radius: 5px;
     
-    border-radius: 50%; width: 340px; height: 360px;
+    border-radius: 50%; width: 380px; height: 360px;
 }
 
 .founder-content p {
