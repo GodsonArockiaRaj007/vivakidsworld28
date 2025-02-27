@@ -378,7 +378,7 @@
                             <li class="nav-item"><a class="nav-link" href="index.html#aboutus">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" href="index.html#littlescholors">Little Scholars</a></li>
                             <li class="nav-item"><a class="nav-link" href="index.html#achivement">Achievements</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.htmlfranchise.html">Franchise</a></li>
+                            <li class="nav-item"><a class="nav-link" href="franchise.html">Franchise</a></li>
                             <li class="nav-item"><a class="nav-link" href="index.html#founder">Founder</a></li>
                             <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
                         </ul>
@@ -410,29 +410,36 @@
     <div class="main-content">
         <div class="left-section">
             
-            <p style="text-align: justify;">Welcome to our play school, where learning meets fun! Enroll your child in an interactive, safe, and joyful environment designed for early childhood development.</p>
+            <p style="text-align: justify;">Welcome to our Viva Kids World pre-school, where learning meets fun! Enroll your child in an interactive, safe, and joyful environment designed for early childhood development.</p>
 
             <div class="info-box">Creative Learning – Art, music, and play-based activities.</div>
             <div class="info-box">Structured Curriculum – Developing essential skills with care.</div>
             <div class="info-box">Social & Emotional Growth – Making friends and learning together.</div>
-            <div class="info-box">Admissions Open Now! – Limited seats available.</div>
+            <div class="info-box">Admissions Open Now! – join with us.</div>
         </div>
         
         <div class="right-section">
             <h2>Enquire Now</h2>
-            <div class="form-container">
-                <form>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Full Name *" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Email *" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Phone Number *" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit</button>
-                </form>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Full Name *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="city" id="city" placeholder="City *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="state" id="state" placeholder="State *" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+
+            </form>
+        
             </div>
         </div>
     </div>
@@ -445,5 +452,41 @@
             });
         });
     </script>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+        let responseMessage = document.getElementById("response");
+
+        // ✅ Define formData correctly
+        let formData = {
+            name: name,
+            email: email,
+            message: message
+        };
+
+        // ✅ Use the correct Google Apps Script URL
+        fetch("https://script.google.com/macros/s/AKfycbwDZEP-KqGGUB8QCcZXLY7hN15m9_QVS18OI0L0_7j-L_F65k9-OmQtINHfBdjDnY70vQ/exec", {
+            method: "POST",
+            mode: "no-cors",  // ✅ Fixes CORS issue
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(() => {
+            responseMessage.textContent = "Submitted Successfully!";
+            document.getElementById("contactForm").reset();
+        })
+        .catch(error => {
+            responseMessage.textContent = "Error: " + error;
+            console.error("Submission Error:", error);
+        });
+    });
+</script>
 </body>
 </html>
