@@ -94,53 +94,65 @@
             window.location.href = "https://wa.me/8220445455"; // Replace with actual WhatsApp link
         }
     </script>
-    <div class="landing-container container-fluid" id="home" >
-        <div class="LandingPage" >
+    <div class="landing-container">
+        <!-- Left Side Content -->
+        <div class="LandingPage">
             <div class="landing-head">
-                <h3 style="padding: 1%;">Innovation in Education.</h3><br>
+                <!-- <h3>Innovation in Education.</h3> -->
+                 <img src="innovation-removebg-preview2.png" style="width: 96%;" alt="head">
             </div>
-            <div class="container container8">
-                <div class="row  justify-content-start"> <!-- Reduced horizontal gap -->
-                    <div class="col-md-4 col-sm-6 d-flex mb-3">
-                        <div class="card3">
-                            <img src="franchise-removebg-preview.png" alt="Brand Icon">
-                            <p>Established Brand</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 d-flex mb-3">
-                        <div class="card3">
-                            <img src="noroyalty.png" alt="Training Support Icon">
-                            <p>No Royalty</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 d-flex mb-3">
-                        <div class="card3">
-                            <img src="emi.png" alt="Extensive Support Icon">
-                            <p>EMI</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 d-flex mb-3">
-                        <div class="card3">
-                            <img src="international.png" alt="Proven Business Model">
-                            <p>International Quality</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 d-flex mb-3">
-                        <div class="card3">
-                            <img src="trainingsupport.jpeg" alt="Economies of Scale">
-                            <p>Training Support</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 d-flex mb-3">
-                        <div class="card3">
-                            <img src="extensivesupport.png" alt="360° Support App">
-                            <p>Extensive Support</p>
-                        </div>
-                    </div>
+
+            <div class="container8">
+                <div class="card3 popup">
+                    <img src="branch.png" alt="Brand Icon">
+                    <p>Established Brand</p>
+                </div>
+                <div class="card3 popup">
+                    <img src="noroyalty.png" alt="Training Support Icon">
+                    <p>No Royalty</p>
+                </div>
+                <div class="card3 popup">
+                    <img src="emi.png" alt="Extensive Support Icon">
+                    <p>EMI</p>
+                </div>
+                <div class="card3 popup">
+                    <img src="international.png" alt="Proven Business Model">
+                    <p>International Quality</p>
+                </div>
+                <div class="card3 popup">
+                    <img src="training-removebg-preview.png" alt="Economies of Scale">
+                    <p>Training Support</p>
+                </div>
+                <div class="card3 popup">
+                    <img src="extensivesupport.png" alt="360° Support App">
+                    <p>Extensive Support</p>
                 </div>
             </div>
         </div>
+
+        <!-- Right Side Slideshow -->
+        <div class="slideshow-container">
+            <img class="slide active" src="png home.png" alt="Image 1">
+            <img class="slide" src="png home 2.png" alt="Image 2">
+            <img class="slide" src="png home.png" alt="Image 3">
+            <img class="slide" src="png home 2.png" alt="Image 4">
+            <img class="slide" src="png home.png" alt="Image 5">
+        </div>
     </div>
+
+    <!-- Slideshow Script -->
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showNextSlide() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        setInterval(showNextSlide, 4000); // Change image every 4 seconds
+    </script>
     
 
     <div class=" about-us" id="aboutus">
@@ -170,7 +182,7 @@
             <div class="col-lg-5 text-center">
                 <div class="image-container1" >
                     <div class="img-1">
-                    <img src="Screenshot 2025-02-08 104830.png"  alt="Play School">
+                    <img src="png home 3.png"  alt="Play School">
                 </div>
             </div>
             </div>
@@ -194,18 +206,14 @@
             </div>
             <!-- Left Side Content -->
             <div class="col-lg-7 philosophy-content">
-                <h1>About Viva Kids World – Enriching Young Minds at Play School!</h1>
+                <h1>Our Philosophy – Learn, Grow, and Enjoy!</h1>
                 <br>
-                <h2 class="subtitle">Where fun and learning come together</h2><br>
+                <h2 class="subtitle">Where curiosity thrives and learning flourishes</h2><br>
 
                 <p>
-                    At Viva Kids World Preschool, we provide a nurturing and stimulating environment where young minds embark on an exciting journey of learning. Our innovative, play-based curriculum fosters creativity, curiosity, and all-round development, ensuring that every child thrives.
-                </p>
-                <p>
-                    Our experienced educators focus on a holistic learning approach that balances academics, arts, and physical activities. Through interactive sessions, hands-on activities, and structured playtime, we create an atmosphere that promotes self-confidence and independence in young learners.
-                </p>
-                <p>
-                    At Viva Kids World, we prioritize every child’s emotional and cognitive growth, ensuring they develop the necessary skills to transition seamlessly into formal education.
+                    At our core, we believe that every child is unique, with their own pace of learning and individual strengths. We are committed to creating a nurturing environment where children feel safe, valued, and encouraged to explore their full potential.Our curriculum is designed to blend the time-tested principles of Montessori education with modern teaching methodologies, ensuring a holistic approach to development. We focus on the four key pillars of early childhood education Emotional Growth,Cognitive Development,Social Skills,Physical Development . We believe in a balanced approach—combining structured learning with free play, allowing children to explore, experiment, and develop confidence in their abilities. Our classrooms are vibrant spaces where curiosity is celebrated, questions are encouraged, and learning is a joyful experience.
+
+                     By fostering a love for learning from an early age, we empower children to grow into well-rounded individuals ready to embrace the future with enthusiasm.   
                 </p>
                 
             </div>
@@ -327,7 +335,7 @@ window.addEventListener('load', checkScroll);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <div style="padding-top: 4%;" class="Infrastructue">
-            <h1 style="text-align: justify;">Our Infrastructure – Safe, Modern, and Inspiring!</h1>
+            <h1 style="text-align: center;">Our Infrastructure – Safe, Modern, and Inspiring!</h1>
 
             <br>
             <p>Viva Kids World provides a vibrant, child-friendly environment with colorful interiors and thoughtfully designed furniture to create an engaging and safe learning space. Our centers are equipped with high-quality toys, teaching aids, and learning materials that enhance cognitive and motor skills development. The infrastructure is carefully planned to support both indoor and outdoor activities, ensuring a balanced mix of learning and play. Every piece of equipment and resource is selected to foster creativity, social interaction, and hands-on learning, making Viva Kids World a perfect place for early childhood development."</p>
@@ -338,7 +346,7 @@ window.addEventListener('load', checkScroll);
  <div class="program-container " id="littlescholors">
         <section class="play-school">
             <div class="play-school-content">
-                <h1 style="text-align: justify;">Empowering Your Child’s Journey from the First Step</h1>
+                <h1 style="text-align: center;">Empowering Your Child’s Journey from the First Step</h1>
                 <div class="content-container">
                     <div class="left-column">
                         <p>
@@ -416,7 +424,7 @@ window.addEventListener('load', checkScroll);
     <div class="container7">
         <!-- Left Section (Text) -->
         <div class="left-content">
-            <h1>Why Viva Kids World is the Ideal Choice for Your Child?</h1>
+            <h1 style="text-align: center;">Why Viva Kids World is the Ideal Choice for Your Child?</h1>
             <p>
                 At Viva Kids World, we believe in fostering a well-rounded learning experience that nurtures every aspect of a child's growth. 
                 Our approach blends academic development with creativity and life skills, creating an environment that encourages curiosity and exploration. 
@@ -432,42 +440,42 @@ window.addEventListener('load', checkScroll);
     
                 <!-- Circle Items -->
                 <div class="circle-item" data-content= "365 Days Support-Year-round learning support for students and parents.">
-                    <img style="width: 50%; height: 50%;" src="365.png" alt="Holistic Learning">
+                    <img style="width: 50%; height: 50%;" src="365 (1).png" alt="Holistic Learning">
                     <!-- <p> App</p> -->
                 </div>
                 <div class="circle-item" data-content="Phonics-Enhancing reading skills with phonics-based learning techniques.">
-                    <img src="phonics.png" alt="Phonics">
+                    <img src="abc-block.png" alt="Phonics">
                     <!-- <p></p> -->
                 </div>
                 <div class="circle-item" data-content="Socialism-Encouraging teamwork, social interaction, and community building.">
-                    <img src="socialism.png" alt="Socialism">
+                    <img src="social-media.png" alt="Socialism">
                     <!-- <p></p> -->
                 </div>
                 <div class="circle-item" data-content="Smart Classes-Technology-driven interactive learning for young minds.">
-                    <img src="smart-class.png" alt="Smart Classes">
+                    <img src="elearning.png" alt="Smart Classes">
                     <!-- <p></p> -->
                 </div>
                 <div class="circle-item" data-content="Fun-filled camps for adventure, learning, and skill development.">
-                    <img src="camp.png" alt="Camps">
+                    <img src="tent.png" alt="Camps">
                     <!-- <p>Camps</p> -->
                 </div>
                 <div class="circle-item" data-content="Concept Culturals-Celebrating traditions through performances, stories, and activities.">
-                    <img src="concept-cultural.png" style="width: 100%; height: 100%;" alt="Concept Culturals">
+                    <img src="strategy.png" style="width: 100%; height: 100%;" alt="Concept Culturals">
                     <!-- <p></p> -->
                 </div>
-                <div class="circle-item" data-content="Concept Culturals-Celebrating traditions through performances, stories, and activities.">
+                <div class="circle-item" data-content="play is at the heart of learning! Our interactive activities nurture teamwork, creativity, and endless fun.">
                     <img style="height: 45%;" src="playing.png" alt="Concept Culturals">
                     <!-- <p></p> -->
                 </div>
-                <div class="circle-item" data-content="Concept Culturals-Celebrating traditions through performances, stories, and activities.">
+                <div class="circle-item" data-content="our vibrant play area fosters creativity, exploration, and joyful learning.where fun meets discovery!">
                     <img style="height: 45%;" src="playground.png" alt="Concept Culturals">
                     <!-- <p></p> -->
                 </div>
-                <div class="circle-item" data-content="Concept Culturals-Celebrating traditions through performances, stories, and activities.">
-                    <img style="height: 35%;" src="book.png" alt="Concept Culturals">
+                <div class="circle-item" data-content="every page sparks curiosity and wonder! Our engaging books make learning fun, interactive, and magical for young minds.">
+                    <img style="height: 35%;" src="fairytale.png" alt="Concept Culturals">
                     <!-- <p></p> -->
                 </div>
-                <div class="circle-item" data-content="Concept Culturals-Celebrating traditions through performances, stories, and activities.">
+                <div class="circle-item" data-content="hands-on play builds creativity and confidence! Our engaging activities help children learn, explore, and grow with joy.">
                     <img style="height: 30%;width: 40%;" src="playtime.png" alt="Concept Culturals">
                     <!-- <p></p> -->
                 </div>
@@ -582,6 +590,7 @@ window.addEventListener('load', checkScroll);
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
     

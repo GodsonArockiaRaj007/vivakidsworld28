@@ -443,229 +443,165 @@ html {
         transform: translateX(0);
     }
 }
- /* General Styles */
- .landing-container {
-    background-image: url('backcloud1.jpg'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    background-attachment: fixed; 
+/* General Styles */
+.landing-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('backcloud1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     height: 100vh;
-    
+    padding-left: 7%;
+    padding-right: 2.6%;
+   
+    gap: 20px; /* Adds spacing between flex items */
 }
 
-
-
-
-/* Main Landing Page */
+/* Left Content (Heading + Cards) */
 .LandingPage {
-    padding-top: 70px; /* Offset for fixed header */
-    padding-bottom: 40px; 
-    text-align: center;
-    opacity: 0;
-    animation: fadeInLandingPage 1s forwards;
-    animation-delay: 0.2s;
-    width: 55%;
-    padding-left: 6%;
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+    min-width: 300px; /* Prevents excessive shrinking */
+    
 }
 
 /* Heading */
-.LandingPage h3 {
-    color: #17395c;
-    font-size: 72px;
-    font-weight: bolder;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* margin-bottom: 15px; */
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideInHeading 1s forwards;
-    animation-delay: 0.5s;
-   
-    text-align: left;
-}
-@media (max-width: 480px) {
-.landing-container{
-    height: auto;
-}
-.LandingPage {
-padding: 0%;
-}
-}
 
-/* Box Container */
-/* Box Container */
+
+/* Cards Container */
 .container8 {
     display: grid;
-    grid-template-columns: repeat(3, auto); /* Auto width to fit content */
-    /* Reduced horizontal space */
-    justify-items: start; /* Align all cards to the left */
-    align-items: center;
-    margin: 0%;
-    opacity: 0;
-    animation: fadeInContainer 1s forwards;
-    animation-delay: 0.4s;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on larger screens */
+    gap: 20px;
+    justify-items: left;
+    margin-top: 50px;
 }
 
-/* Reduce default Bootstrap gutter space */
-
-/* Individual Boxes */
+/* Card Styles */
 .card3 {
     background: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 12px;
     border: 3px solid #17395c;
     text-align: center;
-    width: 150px; /* Adjusted width */
-    height: 130px;
+    width: 170px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideInCard 0.6s forwards;
 }
 
-/* Ensure Sequential Animation */
-.card3:nth-child(1) { animation-delay: 0.2s; }
-.card3:nth-child(2) { animation-delay: 0.4s; }
-.card3:nth-child(3) { animation-delay: 0.6s; }
-.card3:nth-child(4) { animation-delay: 0.8s; }
-.card3:nth-child(5) { animation-delay: 1.0s; }
-.card3:nth-child(6) { animation-delay: 1.2s; }
-
+/* Image inside Card */
 .card3 img {
-    width: 50px; /* Adjusted image size */
-    margin-bottom: 5px;
-    opacity: 0;
-    animation: fadeInImage 0.8s forwards;
-    animation-delay: inherit; /* Ensure images appear with card */
+    width: 50px;
+    height: 50px; /* Ensures uniform icon size */
+    object-fit: contain; 
+    margin-bottom: 10px;
 }
 
-
-/* Text in Boxes */
+/* Text inside Card */
 .card3 p {
     font-weight: bold;
     color: #17395c;
     font-size: 14px;
+    margin: 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .LandingPage h3 {
-        font-size: 50px;
-        width: 100%;
-    }
-    .container3 {
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
-    }
-    .card3 {
-        width: 160px;
-        height: 160px;
-    }
-}
-
+/* Mobile View: 1 Card per Row */
 @media (max-width: 768px) {
-    .LandingPage h3 {
-        font-size: 2vh;
-    }
-    .container3 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    .card3 {
-        width: 140px;
-        height: 140px;
-    }
-    .card3 img {
-        width: 50px;
-    }
-    .landing-container{
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .container3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 500px;
-    }
-    .card3 {
-        width: 100%;
-        max-width: 580px;
-        text-align: center;
-    }
-    .card3 img {
-        width: 50px;
-    }
-    .card3 p {
-        font-size: 14px;
-    }
-    .LandingPage {
-        width: 100%;
-        padding: 0%;
-        text-align: center;
-    }
-   
-}
-
-/* Keyframe Animations */
-@keyframes fadeInLandingPage { to { opacity: 1; } }
-@keyframes slideInHeading { to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeInContainer { to { opacity: 1; } }
-/* Keyframe Animations */
-@keyframes slideInCard {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInImage { to { opacity: 1; } }
-
-@media (max-width: 480px) {
     .container8 {
-         
-        padding: 0%;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+        grid-template-columns: repeat(1, 1fr); /* 1 column per row */
     }
-    
     .card3 {
-        width: 100%; /* Increased width */
-        max-width: 700px; /* Adjust max width */
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .card3 img {
-        width: 60px; /* Slightly larger images */
-    }
-    
-    .card3 p {
-        font-size: 16px; /* Slightly larger text */
-    }
-    
-    .LandingPage {
-       
-        width: 100%;
-        text-align: center;
-        padding-top: 5%;
-    }
-    
-    .LandingPage h3 {
-        
-        font-size: 2.8vh;
-        text-align: center;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-weight: 1000;
-        width: 100%;
+        width: 100%; /* Full width on smaller screens */
+        max-width: 250px;
     }
 }
+
+
+
+/* Right Content (Slideshow) */
+.slideshow-container {
+    flex: 1;
+    max-width: 50%;
+    min-width: 300px;
+    display: flex;
+    justify-content: right;
+}
+
+.slideshow-container img {
+    width: 100%;
+    max-width:100%;
+    height: auto;
+    border-radius: 10px;
+    display: none;
+}
+
+.slideshow-container img.active {
+    display: block;
+}
+
+/* Mobile View */
+@media (max-width: 1024px) {
+    .landing-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        /* padding: 5%; */
+    }
+
+    .LandingPage {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .slideshow-container {
+        padding-top: 3%;
+        order: 2;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .landing-head {
+        order: 1;
+        
+    }
+
+    .container8 {
+        order: 3;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        justify-items: center;
+    }
+
+    .card3 {
+        width: 100%;
+        max-width: 180px;
+    }
+}
+/* Cards Container */
+
+
+/* Mobile View: 1 Card per Row */
+@media (max-width: 768px) {
+    .container8 {
+        grid-template-columns: repeat(1, 1fr); /* 1 column per row */
+    }
+}
+@media (max-width: 480px) {
+.landing-head h3{
+    font-size: 6vh;
+}
+}
+
+
 .about-us h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -688,37 +624,33 @@ padding: 0%;
 }
 
 .about-bg{
-    background-image: url('backcloud2.jpg'); /* Replace with your image path */
+    background-image: url('bgaboutus.jpg'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Fixes the image in place */
     padding-left: 7%;
     padding-right: 7%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
+    padding-top: 4%;
 }
 .philosophy-bg{
-    background-image: url('backcloud3.jpg'); /* Replace with your image path */
+    background-image: url('bgphilosophy.jpg'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Fixes the image in place */
     padding-left: 7%;
     padding-right: 7%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
+    padding-top: 3%;
 }
 
 /* Image Styling */
-.image-container1 {
-    /* margin-left: 15%; */
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    margin-left: 15%;
-}
 
 .image-container1 img {
     width: 100%;
+    height: auto;
     
     border-radius: 10px;
     object-fit: cover;
@@ -749,6 +681,7 @@ padding: 0%;
 .subtitle {
     font-style: italic;
     font-size: 2.8vh;
+    font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #17395c;
     border-left: 3px solid #4873b4 ;
@@ -856,18 +789,20 @@ padding: 0%;
     .image-container1 {
         margin: 0; /* Resets all margins */
         padding: 0; /* Resets all paddings */
-        max-width: 100%;
+       
         display: flex;
         justify-content: flex-end; /* Moves image inside container to the right */
-        margin-right: 5%;
+        margin-right: 2%;
     }
 
     /* Ensure the image itself aligns properly */
     .image-container1 img {
-        max-width: 100%;
+        
+        width: 150%;
         height: auto;
         display: block; /* Removes extra spacing from inline elements */
         margin: 0; /* Ensures no unwanted margins */
+        margin-left: 10%;
     }
     .image-container2 {
         margin: 0; /* Resets all margins */
@@ -916,6 +851,7 @@ padding: 0%;
     padding-left: 7%;
     padding-right: 7%;
     padding-bottom: 0%;
+    padding-top: 2%;
 } 
 .advantage-container h1 {
     text-align: center;
@@ -934,7 +870,7 @@ padding: 0%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     
     font-size: 1rem;
     width: 1000%; /* Increase width */
@@ -1019,7 +955,7 @@ padding: 0%;
     }
 }
 .advantage-infra-bg{
-    background-image: url('backcloud2.jpg'); 
+    background-image: url('bgaboutus.jpg'); 
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
@@ -1064,7 +1000,7 @@ padding: 0%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .pg-bg{
-    background-image: url('backcloud3.jpg'); /* Replace with your image path */
+    background-image: url('bgphilosophy.jpg'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
@@ -1175,7 +1111,7 @@ padding: 0%;
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 10%;
     backface-visibility: hidden;
     background-size: cover;
     background-position: center;
@@ -1207,8 +1143,8 @@ padding: 0%;
 }
 
 /* Circle Images */
-#circle1 { background-image: url('pongal.jpeg'); }
-#circle2 { background-image: url('diwali.jpeg'); }
+#circle1 { background-image: url('little1.jpg'); }
+#circle2 { background-image: url('little2.jpg'); }
 #circle3 { background-image: url('christmas.jpeg'); }
 #circle4 { background-image: url('ramzan.jpeg'); }
 
@@ -1249,7 +1185,7 @@ button:hover {
 }
 
 .con-bg {
-    background-image: url('backcloud2.jpg'); /* Replace with your image path */
+    background-image: url('bgaboutus.jpg'); /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1326,16 +1262,16 @@ button:hover {
 }
 
 /* Position Circles on Tree (Using relative positioning) */
-.circle-item:nth-child(7) { top: 36%; left: 55%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(7) { top: 37%; left: 55%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(2) { top: 76.5%; left: 63%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(3) { top: 50%; left: 78%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(4) { top: 65%; left: 50%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(5) { top: 57%; left: 34%; transform: translate(-50%, -50%); }
-.circle-item:nth-child(6) { top: 20.5%; left: 73.5%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(6) { top: 20.5%; left: 74%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(8) { top: 30.5%; left: 35%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(9) { top: 12%; left: 49%; transform: translate(-50%, -50%); }
 .circle-item:nth-child(10) { top: 60.5%; left: 63%; transform: translate(-50%, -50%); }
-.circle-item:nth-child(11) { top: 15.8%; left: 61%; transform: translate(-50%, -50%); }
+.circle-item:nth-child(11) { top: 16%; left: 61%; transform: translate(-50%, -50%); }
 /* Default style for all icons */
 .circle-item img {
     object-fit: contain;
@@ -1648,7 +1584,7 @@ button:hover {
 } */
 
 .founder-bg{
-    background-image: url('backcloud4.jpg'); /* Replace with your image path */
+    background-image: url('bgfounder.jpg'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center; /* Centers the image */
