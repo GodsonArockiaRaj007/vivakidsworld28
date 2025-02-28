@@ -186,6 +186,7 @@
     .stat-box {
         width: 100%;
         margin-bottom: 15px;
+       
     }
 
     .form-group-inline {
@@ -439,7 +440,7 @@
     <div class="fixed-header" >
         <header class="navbar navbar-expand-lg">
             <div class="container-fluid d-flex justify-content-between ">
-                <img src="logowhite.jpg" style="margin-top: 0%;margin-right: 0%;" alt="Logo" class="logo-img">
+                <img src="logotm.jpg" style="margin-top: 0%;margin-right: 0%;" alt="Logo" class="logo-img">
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-list" viewBox="0 0 16 16">
@@ -483,29 +484,100 @@
 
 
         </script>
+        <div class="mobile-only">
+            <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Franchise Opportunity</h1>
+        </div>
+        <style>
+            /* Hide on desktop */
+            .mobile-only {
+                display: none;
+            }
+        
+            /* Show on mobile (screen width 768px and below) */
+            @media (max-width: 768px) {
+                .mobile-only {
+                    display: block; /* Or flex if needed */
+                }
+            }
+            .desktop-only {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+}
+.left-section h1,
+.left-section p{
+        padding-left: 1%;
+}
+        </style>
+       
     <div class="container" id="mainContent">
         <div class="left-section">
-            <h1>Franchise Opportunity</h1>
+            <h1 class="desktop-only">Franchise Opportunity</h1>
             <p>Start your own Viva Kids World preschool today! In minimum 1500* sq. feet space</p>
             <div class="stats-container">
                 <div class="stat-box">
-                    <h4 style="padding-top: 20%;">No Royalty</h4>
-                   
+                    <img src="noroyalty.png" alt="No Royalty Icon">
+                    <h4>No Royalty</h4>
                 </div>
-               
+            
                 <div class="stat-box">
-                    <h4 style="text-align: center;padding-top: 20%;">EMI</h4>
-                    
+                    <img src="emi.png" alt="EMI Icon">
+                    <h4>EMI</h4>
                 </div>
+            
                 <div class="stat-box">
-                    <h4>20+Yr</h4>
+                    <img src="experience.jpg" alt="Experience Icon">
+                    <h4>20+ Yr</h4>
                     <h4>Experience</h4>
                 </div>
+            
                 <div class="stat-box">
-                    <h4>360 deg</h4>
+                    <img src="360.jpg" alt="Support Icon">
+                    <h4>360°</h4>
                     <h4>Support</h4>
                 </div>
             </div>
+            
+            <style>
+                .stats-container {
+                    display: flex;
+                    justify-content: space-around;
+                    text-align: center;
+                    gap: 30px;
+                    flex-wrap: wrap; /* Allow wrapping */
+                    
+                }
+            
+                .stat-box {
+                    width: 150px;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 10px;
+                }
+            
+                .stat-box img {
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 10px;
+                }
+            
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                    .stats-container {
+                        justify-content: center; /* Center items on mobile */
+                    }
+            
+                    .stat-box {
+                        width: 80%; /* Make boxes take more space on small screens */
+                        max-width: 200px; /* Prevent excessive stretching */
+                    }
+                }
+            </style>
+            
         </div>
         <div class="right-section">
             <h2>Enquire Now</h2>
@@ -576,6 +648,21 @@
 
             showNextQuote();
         });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        // Show a success alert
+        alert("Submission successful! We will get back to you soon.");
+
+        // Reset the form fields
+        form.reset();
+    });
+});
     </script>
     
 

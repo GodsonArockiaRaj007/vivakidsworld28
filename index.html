@@ -94,7 +94,7 @@
             window.location.href = "https://wa.me/8220445455"; // Replace with actual WhatsApp link
         }
     </script>
-    <div class="landing-container">
+    <div class="landing-container" id="home">
         <!-- Left Side Content -->
         <div class="LandingPage">
             <div class="landing-head">
@@ -206,7 +206,7 @@
                 <div class="col-lg-7 order-lg-2 order-1 philosophy-content">
                     <h1>Our Philosophy – Learn, Grow, and Enjoy!</h1>
                     <div class="image-container-mobile d-block d-lg-none">
-                        <img src="philoimg.jpg" style="height: 450px;" alt="Play School">
+                        <img src="philoimg.jpg"  alt="Play School">
                     </div>
                     <h2 class="subtitle"  style="margin-top: 20px;
     margin-bottom: 20px;">Where curiosity thrives and learning flourishes</h2>
@@ -260,6 +260,36 @@ function checkScroll() {
 window.addEventListener('scroll', checkScroll);
 
 // Initial check on page load to handle elements already in view
+window.addEventListener('load', checkScroll);
+
+    </script>
+    <script>
+        // Function to check if an element is in view
+function isElementInView(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top <= window.innerHeight * 0.9 && rect.bottom >= 0; // 90% threshold
+}
+
+// Function to check all elements on scroll
+function checkScroll() {
+    document.querySelectorAll('.slide-in-left, .slide-in-right').forEach(element => {
+        if (isElementInView(element)) {
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Add classes to elements for left/right animations
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.about-us .col-lg-7').forEach(el => el.classList.add('slide-in-left')); // Left content
+    document.querySelectorAll('.about-us .col-lg-5').forEach(el => el.classList.add('slide-in-right')); // Right images
+
+    document.querySelectorAll('.philosophy-content').forEach(el => el.classList.add('slide-in-left')); // Left text
+    document.querySelectorAll('.image-container2').forEach(el => el.classList.add('slide-in-right')); // Right images
+});
+
+// Check scroll on load and on scroll event
+window.addEventListener('scroll', checkScroll);
 window.addEventListener('load', checkScroll);
 
     </script>
@@ -581,11 +611,11 @@ At Viva Kids World Pre-Play School, Kanchipuram, we take immense pride in foster
     <div class="contact-container" id="contact">
         <!-- <h1 class="contact-title">Get in Touch</h1> <br> -->
         <div class="social-links" style="align-items: center; justify-content: center;">
-            <a href="https://www.instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon x-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/viva_kidsworld?igsh=OHpod3hpNHRjd211" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="https://www.twitter.com" target="_blank" class="social-icon x-twitter"><i class="fa-brands fa-x-twitter"></i></a> -->
             <a href="https://www.facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.youtube.com" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://youtube.com/@vivakids-g6l?si=Ojz2fZ_gWYypUBmB" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/vivakids-world-808aa5353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
         </div>
     
         <div class="contact-content">
