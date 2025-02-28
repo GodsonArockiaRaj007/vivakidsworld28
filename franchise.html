@@ -519,12 +519,12 @@
             <h1 class="desktop-only">Franchise Opportunity</h1>
             <p>Start your own Viva Kids World preschool today! In minimum 1500* sq. feet space</p>
             <div class="stats-container">
-                <div class="stat-box" style="padding-top: 5%;">
+                <div class="stat-box pad" style="padding-top: 5%;">
                     <img src="noroyalty.png" alt="No Royalty Icon">
                     <h5>No Royalty</h5>
                 </div>
             
-                <div class="stat-box" style="padding-top: 5%;">
+                <div class="stat-box pad" style="padding-top: 5%;">
                     <img src="emi.png"  alt="EMI Icon">
                     <h5>EMI</h5>
                 </div>
@@ -555,10 +555,11 @@
             
                 .stat-box {
                     width: 140px;
-                    height: auto;
+                    height: 160px;
                     padding: 20px;
                     border: 1px solid #ccc;
                     border-radius: 10px;
+                    justify-content: center; /* Ensures content is centered */
                 }
             
                 .stat-box img {
@@ -576,6 +577,13 @@
                     .stat-box {
                         width: 80%; /* Make boxes take more space on small screens */
                         max-width: 200px; /* Prevent excessive stretching */
+                    }
+                     .pad h5{
+                        padding-top: 10%;
+                    }
+                    .pad img{
+
+                        margin-top: 10%;
                     }
                 }
             </style>
