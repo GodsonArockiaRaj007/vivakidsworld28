@@ -913,12 +913,13 @@ html {
     }
     .subtitle {
         order: 3;
-        text-align: center;
+        text-align: left;
         font-size: 2.4vh;
     }
     .philosophy-content p {
         order: 4;
         font-size: 2vh;
+        padding-bottom: 25px;
     }
 }
 @media (max-width: 992px) {
@@ -1145,7 +1146,11 @@ html {
     width: 50%; /* Makes each column take half the width */
 }
 
-
+@media (max-width: 768px) {
+    .content-container {
+    gap: 0px;
+    }
+}
 
 .play-school-content p {
     
@@ -1578,6 +1583,7 @@ font-size: 2.5vh;
 @media (max-width: 768px) {
     .carousel-track {
         justify-content: center;
+        gap: 20px;
     }
     .carousel-image {
         width: 80%; /* Show only one image */
@@ -1652,7 +1658,7 @@ padding-top: 0%;
 .founder-img img {
     border-radius: 5px;
     
-    border-radius: 50%; width: 450px; height: 410px;
+    border-radius: 50%; width: 450px; height: auto;
 }
 
 .founder-content p {
@@ -1716,7 +1722,7 @@ padding-top: 0%;
     .founder-img img{
        
     
-        border-radius: 50%; width: 300px; height: 270px;
+        border-radius: 50%; width: 300px; height: auto;
     }
     
 }
@@ -1729,6 +1735,7 @@ padding-top: 0%;
     .founder-content p {
         padding: 0 2.8%;
         font-size: 2vh;
+        padding-bottom: 5%;
     }
     
     .founder-head h1{
